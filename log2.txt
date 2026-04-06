@@ -1,0 +1,124 @@
+--------- beginning of main
+04-06 19:49:57.936 D/YandexTranslation(17711): Starting translation for: https://youtu.be/nTOVIGsqCuY (Learn the basics of Google Antigravity)
+04-06 19:49:58.082 E/YandexTranslation(17711): HTTP 402, error body: (error_id:1775504998979792-14177182500982385077-pshhzs4sojdk2hyk-BAL) see logs for details
+04-06 19:54:40.652 D/YandexTranslation(18265): Starting translation for: https://youtu.be/nTOVIGsqCuY (Learn the basics of Google Antigravity)
+04-06 19:54:40.815 E/YandexTranslation(18265): HTTP 402, error body: (error_id:1775505281705210-353440459701238032-dyvxb3hnmxwnc36z-BAL) see logs for details
+04-06 20:11:19.232 D/YandexTranslation(19248): Starting translation for: https://youtu.be/nTOVIGsqCuY (Learn the basics of Google Antigravity)
+04-06 20:11:19.232 D/YandexTranslation(19248): Creating new Vtrans session...
+04-06 20:11:19.423 D/YandexTranslation(19248): Session created: uuid=75298D9B54AA9F0BE32BD8D2CCEC1672, expires=3600
+04-06 20:11:19.516 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:11:19.517 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:11:24.658 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:11:24.658 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:11:29.740 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:11:29.740 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:11:34.807 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:11:34.808 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:11:39.866 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:11:39.867 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:11:44.965 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:11:44.965 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:11:50.061 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:11:50.061 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:11:55.140 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:11:55.140 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:12:00.213 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:12:00.214 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:12:05.314 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:12:05.314 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:12:10.416 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:12:10.416 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:12:15.503 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:12:15.503 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:12:20.572 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:12:20.573 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:12:25.646 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:12:25.646 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:12:30.723 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:12:30.723 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:12:35.819 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:12:35.819 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:12:40.901 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:12:40.902 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:12:46.009 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:12:46.009 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:12:51.104 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:12:51.104 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:12:56.164 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:12:56.165 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:13:01.243 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:13:01.243 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:13:06.304 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:13:06.304 D/YandexTranslation(19248): Response: status=6, url=null, remaining=71, error=null
+04-06 20:13:11.397 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:13:11.397 D/YandexTranslation(19248): Response: status=6, url=null, remaining=71, error=null
+04-06 20:13:16.490 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:13:16.491 D/YandexTranslation(19248): Response: status=6, url=null, remaining=71, error=null
+04-06 20:13:21.758 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:13:21.758 D/YandexTranslation(19248): Response: status=6, url=null, remaining=71, error=null
+04-06 20:13:26.859 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:13:26.860 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:13:31.937 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:13:31.937 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:13:36.995 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:13:36.995 D/YandexTranslation(19248): Response: status=6, url=null, remaining=71, error=null
+04-06 20:13:42.099 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:13:42.099 D/YandexTranslation(19248): Response: status=6, url=null, remaining=71, error=null
+04-06 20:13:47.177 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:13:47.177 D/YandexTranslation(19248): Response: status=6, url=null, remaining=71, error=null
+04-06 20:13:52.258 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:13:52.258 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:13:57.364 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:13:57.369 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:14:02.446 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:14:02.447 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:14:07.545 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:14:07.549 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:14:13.576 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:14:13.578 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:14:18.662 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:14:18.664 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:14:23.843 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:14:23.843 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:14:29.365 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:14:29.365 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:14:34.473 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:14:34.474 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:14:39.570 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:14:39.570 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:14:44.659 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:14:44.660 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:14:49.771 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:14:49.771 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:14:54.843 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:14:54.844 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:14:59.939 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:14:59.939 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:15:05.034 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:15:05.035 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:15:10.129 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:15:10.130 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:15:15.224 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:15:15.224 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:15:20.350 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:15:20.350 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:15:25.426 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:15:25.427 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:15:30.520 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:15:30.521 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:15:35.610 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:15:35.611 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:15:40.688 D/YandexTranslation(19248): Translation response: HTTP 200
+04-06 20:15:40.689 D/YandexTranslation(19248): Response: status=6, url=null, remaining=70, error=null
+04-06 20:15:42.051 E/YandexTranslation(19248): Translation failed
+04-06 20:15:42.051 E/YandexTranslation(19248): kotlinx.coroutines.JobCancellationException: StandaloneCoroutine was cancelled; job=StandaloneCoroutine{Cancelling}@a783f74
+04-06 20:30:28.724 D/YandexTranslation(20415): Starting translation for: https://youtu.be/nTOVIGsqCuY (Learn the basics of Google Antigravity)
+04-06 20:30:28.724 D/YandexTranslation(20415): Creating new Vtrans session...
+04-06 20:30:28.919 D/YandexTranslation(20415): Session created: uuid=32DD61BEB263D47250EFC98D21AFD0A5, expires=3600
+04-06 20:30:29.118 D/YandexTranslation(20415): Translation response: HTTP 200
+04-06 20:30:29.118 D/YandexTranslation(20415): Response: status=0, url=null, remaining=0, error=Возникла ошибка при переводе, попробуйте позже
+04-06 20:32:31.273 D/YandexTranslation(20846): Starting translation for: https://youtu.be/nTOVIGsqCuY (Learn the basics of Google Antigravity)
+04-06 20:32:31.273 D/YandexTranslation(20846): Creating new Vtrans session...
+04-06 20:32:31.477 D/YandexTranslation(20846): Session created: uuid=6CB90033460186480EA77B61A5D5B2A1, expires=3600
+04-06 20:32:31.563 D/YandexTranslation(20846): Translation response: HTTP 200
+04-06 20:32:31.563 D/YandexTranslation(20846): Response: status=0, url=null, remaining=0, error=Возникла ошибка при переводе, попробуйте позже

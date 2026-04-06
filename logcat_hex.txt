@@ -1,0 +1,502 @@
+--------- beginning of system
+04-06 19:02:20.680   806  1305 E ClipboardService: Denying clipboard access to org.schabi.newpipe.debug, application is not in focus nor is it a system service for user 0
+--------- beginning of main
+04-06 19:02:20.689  1340  1340 I ClipboardListener: Clipboard overlay suppressed.
+04-06 19:02:20.689  2113  2451 I AiAiTranslate: C2T - not in a conversation
+04-06 19:02:21.134   639   749 D AF::Track: interceptBuffer: took 1763us to intercept 0 tracks
+04-06 19:02:21.524 15642 15645 W ocessService0:0: userfaultfd: MOVE ioctl seems unsupported: Connection timed out
+04-06 19:02:21.564 15863 15863 W libbinder.BackendUnifiedServiceManager: Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: package
+04-06 19:02:21.610 15602 15602 D SPONSOR_BLOCK: Hiding manual skip buttons (UNSKIP)
+04-06 19:02:21.656   806   834 I DisplayDeviceRepository: Display device changed render timings: "Built-in Screen", renderFrameRate=60.000004, presentationDeadlineNanos=16666666, appVsyncOffsetNanos=1000000, frameRateOverrides=[{uid=10230 frameRateHz=60.000004}]
+04-06 19:02:21.664  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
+04-06 19:02:21.670  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_AdsDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:21.676  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_CronetDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:21.678  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteLoader_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:21.681  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteModulesA_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:21.683  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteModulesC_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:21.686  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_GoogleCertificates_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:21.689  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_MapsDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:21.691  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_MeasurementDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:21.694  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_all_locale_splits.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:21.696  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000d/dl-PlayCloudSearch.optional_253434100000.apk has no usable artifacts
+04-06 19:02:21.697  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000b/dl-MlkitBarcodeUi.optional_253434100800.apk has no usable artifacts
+04-06 19:02:21.699  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000a/dl-TfliteDynamiteDynamite.integ_252130102100800.apk has no usable artifacts
+04-06 19:02:21.699  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.apk has no usable artifacts
+04-06 19:02:21.700  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000016/dl-PlayCloudSearch.optional_260438100000.apk has no usable artifacts
+04-06 19:02:21.701  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000002/DynamiteLoader.apk has no usable artifacts
+04-06 19:02:21.702  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000005/GoogleCertificates.apk has no usable artifacts
+04-06 19:02:21.703  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000c/dl-Appsearch.optional_253434100800.apk has no usable artifacts
+04-06 19:02:21.704  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000015/dl-MlkitOcrCommon.optional_260438100800.apk has no usable artifacts
+04-06 19:02:21.705  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000013/dl-MlkitBarcodeUi.optional_260438100800.apk has no usable artifacts
+04-06 19:02:21.706  9409  9410 I artd    : GetBestInfo: vdex next to the dex file (/data/user/0/com.google.android.gms/app_dg_cache/BB2AE5A47BB198AF36C19CFD2B6407061A1BAF30/oat/x86_64/the.vdex) is kOatUpToDate with filter 'verify' executable 'false'
+04-06 19:02:21.707  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000011/dl-Appsearch.optional_260438100800.apk has no usable artifacts
+04-06 19:02:21.708  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000010/dl-VisionOcr.optional_260438100000.apk has no usable artifacts
+04-06 19:02:21.710  9409  9410 I artd    : GetBestInfo: /data/user/0/com.google.android.gms/app_dg_cache/94DF452EEF4B8E717545DCDEA6CC3C50A319A195/the.apk has no usable artifacts
+04-06 19:02:21.711  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000007/MeasurementDynamite.apk has no usable artifacts
+04-06 19:02:21.949   639   749 D AF::Track: interceptBuffer: took 2417us to intercept 0 tracks
+04-06 19:02:22.020   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:02:22.608 15602 15602 D SPONSOR_BLOCK: Hiding manual skip buttons (UNSKIP)
+04-06 19:02:23.029 15602 15602 D BasePlayerGestListener: onDown called with e = [MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=501.96582, y[0]=154.96875, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=7075347, downTime=7075347, deviceId=4, source=0x5002, displayId=0, eventId=156808646 }]
+04-06 19:02:23.029   806   834 I DisplayDeviceRepository: Display device changed render timings: "Built-in Screen", renderFrameRate=60.000004, presentationDeadlineNanos=16666666, appVsyncOffsetNanos=1000000, frameRateOverrides=[]
+04-06 19:02:23.332 15602 15602 D MainPlayerGestureListener: onSingleTapConfirmed() called with: e = [MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=501.96582, y[0]=154.96875, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=7075347, downTime=7075347, deviceId=4, source=0x5002, displayId=0, eventId=156808646 }]
+04-06 19:02:23.332 15602 15602 D VideoPlayerUi: showControlsThenHide() called
+04-06 19:02:23.350  1529  1688 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+04-06 19:02:23.352  1529  1688 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+04-06 19:02:23.439   806  2296 W NotificationService: Toast already killed. pkg=org.polymorphicshade.tubular.debug token=android.os.BinderProxy@fe30298
+04-06 19:02:23.466  6884  6884 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdownVoiceInternal():148 shutdownVoiceInternal()
+04-06 19:02:23.467  6884  6884 W NotificationCenter: NotificationCenter.unregisterListener():480 Listener hxc@5cc55e1 was not registered for notification class ngb
+04-06 19:02:23.608 15602 15602 D SPONSOR_BLOCK: Hiding manual skip buttons (UNSKIP)
+04-06 19:02:23.642 15602 15602 D VideoPlayerUi: hideControls() called with: duration = [300], delay = [2000]
+04-06 19:02:24.414 15602 15602 D VideoPlayerUi: onClick() called with: v = [androidx.appcompat.widget.AppCompatImageButton{f98eac8 VFED..C.. ...P.... 446,224-633,382 #7f0a0326 app:id/playPauseButton}]
+04-06 19:02:24.414 15602 15602 D Player  : onPlayPause() called
+04-06 19:02:24.414 15602 15602 D Player  : pause() called
+04-06 19:02:24.415   806  2287 I MediaFocusControl: abandonAudioFocus() from uid/pid 10230/15602 clientId=android.media.AudioManager@5f9ee4forg.schabi.newpipe.player.helper.AudioReactor@1189a9f callingPack=org.polymorphicshade.tubular.debug
+04-06 19:02:24.417   806  2380 W AS.PlaybackActivityMon: No piid assigned for invalid/internal port id 46
+04-06 19:02:24.419   806  2369 E AppOps  : attributionTag  not declared in manifest of org.polymorphicshade.tubular.debug
+04-06 19:02:24.419   806  2385 E AppOps  : attributionTag  not declared in manifest of org.polymorphicshade.tubular.debug
+04-06 19:02:24.421   806  2380 I WifiService: releaseWifiLock uid=10230
+04-06 19:02:24.433 12199 12199 I MediaPlayerList: updateMediaForAudioPlayback: Active player is playing, drop it
+04-06 19:02:24.435 15602 15602 D Player  : ExoPlayer - onPlayWhenReadyChanged() called with: playWhenReady = [false], reason = [1]
+04-06 19:02:24.435 15602 15602 D Player  : ExoPlayer - updatePlaybackState() called with: playWhenReady = [false], playbackState = [3]
+04-06 19:02:24.435 15602 15602 D Player  : changeState() called with: state = [126]
+04-06 19:02:24.435 15602 15602 D Player  : onPaused() called
+04-06 19:02:24.435 15602 15602 D NotificationUtil: updateNotification()
+04-06 19:02:24.436 12199 12199 I MediaPlayerList: updateMediaForAudioPlayback: Active player is playing, drop it
+04-06 19:02:24.440 15602 15602 D VideoPlayerUi: showControls() called
+04-06 19:02:24.442 15602 15602 D Player  : saveStreamProgressState() called with: progressMillis=67924, currentMetadata=[Learn the basics of Google Antigravity]
+04-06 19:02:24.451   806  2385 D MediaSessionService: onSessionPlaybackStateChanged: record=org.polymorphicshade.tubular.debug/MediaSessionPlayerServ/5 (userId=0) playbackState=PlaybackState {state=PAUSED(2), position=67924, buffered position=118660, speed=0.0, updated=7076770, actions=2365311, custom actions=[Action:mName='Current mode: Repeat none. Toggle repeat mode., mIcon=2131230910, mExtras=null, Action:mName='Close, mIcon=2131230976, mExtras=null], active item id=0, error=null}
+04-06 19:02:24.452   806  1291 D BackgroundInstallControlService: Package event received: 0
+04-06 19:02:24.466  1340  1590 D MediaDataManager: State updated outside of notification
+04-06 19:02:24.466 12199 12199 W MediaControlGattService: Feature PLAYBACK_SPEED support: true
+04-06 19:02:24.466 12199 12199 W MediaControlGattService: Feature PLAYBACK_SPEED support: true
+04-06 19:02:24.467 12199 12199 W MediaControlGattService: Feature PLAYBACK_SPEED support: true
+04-06 19:02:24.467 12199 12199 W MediaControlGattService: Feature PLAYBACK_SPEED_NOTIFY support: true
+04-06 19:02:24.468 12199 12199 I BluetoothAdapterProperties: getBondedDevices: length=0
+04-06 19:02:24.468 12199 12199 W MediaControlGattService: Feature TRACK_POSITION support: true
+04-06 19:02:24.468 12199 12199 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+04-06 19:02:24.468 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:24.468 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:24.469 12199 12199 I BluetoothAdapterProperties: getBondedDevices: length=0
+04-06 19:02:24.469 12199 12199 W MediaControlGattService: Feature PLAYER_NAME support: true
+04-06 19:02:24.469 12199 12199 W MediaControlGattService: Feature PLAYER_NAME support: true
+04-06 19:02:24.469 12199 12199 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED support: true
+04-06 19:02:24.469 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:24.469 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:24.470 12199 12199 I BluetoothAdapterProperties: getBondedDevices: length=0
+04-06 19:02:24.471 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:24.471 12199 12199 W MediaControlGattService: Feature SEEKING_SPEED support: true
+04-06 19:02:24.471 12199 12199 W MediaControlGattService: Feature SEEKING_SPEED support: true
+04-06 19:02:24.471 12199 12199 W MediaControlGattService: Feature SEEKING_SPEED support: true
+04-06 19:02:24.472 12199 12199 I bluetooth: system/btif/avrcp/avrcp_service.cc:532 SendMediaUpdate: track_changed=false :  play_state=true :  queue=false
+04-06 19:02:24.473  1340  1340 W ConstraintSet: id unknown seamless_vertical_guideline
+04-06 19:02:24.473  1340  1340 W ConstraintSet: id unknown action_button_guideline
+04-06 19:02:24.473  1340  1340 W ConstraintSet: id unknown icon
+04-06 19:02:24.473  1340  1340 W ConstraintSet: id unknown device_suggestion_container
+04-06 19:02:24.473  1340  1340 W ConstraintSet: id unknown media_session_vertical_barrier
+04-06 19:02:24.473  1340  1340 W ConstraintSet: id unknown media_seamless
+04-06 19:02:24.473  1340  1340 W ConstraintSet: id unknown media_action_barrier_start
+04-06 19:02:24.473  1340  1340 W ConstraintSet: id unknown media_action_barrier_end
+04-06 19:02:24.473  1340  1340 W ConstraintSet: id unknown media_action_barrier_top
+04-06 19:02:24.473  1340  1340 W ConstraintSet: id unknown remove_text
+04-06 19:02:24.473  1340  1340 W ConstraintSet: id unknown settings
+04-06 19:02:24.473  1340  1340 W ConstraintSet: id unknown dismiss
+04-06 19:02:24.473  1340  1340 W ConstraintSet: id unknown cancel
+04-06 19:02:24.477  1340  1340 W ConstraintSet: id unknown seamless_vertical_guideline
+04-06 19:02:24.477  1340  1340 W ConstraintSet: id unknown action_button_guideline
+04-06 19:02:24.477  1340  1340 W ConstraintSet: id unknown icon
+04-06 19:02:24.477  1340  1340 W ConstraintSet: id unknown device_suggestion_container
+04-06 19:02:24.477  1340  1340 W ConstraintSet: id unknown media_session_vertical_barrier
+04-06 19:02:24.477  1340  1340 W ConstraintSet: id unknown media_seamless
+04-06 19:02:24.477  1340  1340 W ConstraintSet: id unknown media_action_barrier_start
+04-06 19:02:24.477  1340  1340 W ConstraintSet: id unknown media_action_barrier_end
+04-06 19:02:24.477  1340  1340 W ConstraintSet: id unknown media_action_barrier_top
+04-06 19:02:24.477  1340  1340 W ConstraintSet: id unknown remove_text
+04-06 19:02:24.477  1340  1340 W ConstraintSet: id unknown settings
+04-06 19:02:24.477  1340  1340 W ConstraintSet: id unknown dismiss
+04-06 19:02:24.477  1340  1340 W ConstraintSet: id unknown cancel
+04-06 19:02:24.573  1340  1382 I ndroid.systemui: Waiting for a blocking GC ProfileSaver
+04-06 19:02:24.575   592 15834 W C2BqBuffer: last successful dequeue was 114859 us ago, 9 consecutive failures
+04-06 19:02:24.648  2113  2894 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+04-06 19:02:24.648  2113  2894 I AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+04-06 19:02:24.668  1340  1382 I ndroid.systemui: WaitForGcToComplete blocked ProfileSaver on Background for 94.777ms
+04-06 19:02:24.869 15602 15602 D MediaSourceManager@186171489: MediaSource - loadImmediate() called
+04-06 19:02:24.870 15602 15602 D MediaSourceManager@186171489: MediaSource - maybeClearLoaders() called.
+04-06 19:02:24.870 15602 15602 D MediaSourceManager@186171489: maybeLoadItem() called.
+04-06 19:02:25.024   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:02:25.424 15602 15828 D BufferPoolAccessor2.0: bufferpool2 0x7a12082621e8 : 5(31457280 size) total buffers - 4(25165824 size) used buffers - 402/408 (recycle/alloc) - 6/407 (fetch/transfer)
+04-06 19:02:27.535   587  7533 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 37765568
+04-06 19:02:27.535   587  7533 D android.hardware.audio@7.1-impl.ranchu: ~TinyalsaSink: joining consumeThread
+04-06 19:02:27.544   587 15843 D android.hardware.audio@7.1-impl.ranchu: consumeThread: exiting
+04-06 19:02:27.545   587  7533 D android.hardware.audio@7.1-impl.ranchu: ~TinyalsaSink: stopping PCM stream
+04-06 19:02:28.031   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:02:28.432   806   942 D ActivityManager: freezing 6646 com.google.android.gms
+04-06 19:02:28.551 15602 15832 D BufferPoolAccessor2.0: bufferpool2 0x7a120827a8b8 : 5(40960 size) total buffers - 0(0 size) used buffers - 621/626 (recycle/alloc) - 5/626 (fetch/transfer)
+04-06 19:02:28.551 15602 15832 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+04-06 19:02:28.868   717   754 D BufferPoolAccessor2.0: bufferpool2 0x7713a64140f8 : 5(20480 size) total buffers - 0(0 size) used buffers - 617/622 (recycle/alloc) - 6/622 (fetch/transfer)
+04-06 19:02:28.868   717   754 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+04-06 19:02:29.552 15602 15832 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+04-06 19:02:29.587   592 15834 W C2BqBuffer: last successful dequeue was 5126691 us ago, 442 consecutive failures
+04-06 19:02:31.038   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:02:31.552 15870 15870 W libbinder.BackendUnifiedServiceManager: Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: package
+04-06 19:02:31.650  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
+04-06 19:02:31.651  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_AdsDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:31.653  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_CronetDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:31.655  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteLoader_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:31.657  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteModulesA_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:31.659  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteModulesC_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:31.660  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_GoogleCertificates_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:31.661  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_MapsDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:31.663  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_MeasurementDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:31.664  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_all_locale_splits.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:31.665  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000d/dl-PlayCloudSearch.optional_253434100000.apk has no usable artifacts
+04-06 19:02:31.667  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000b/dl-MlkitBarcodeUi.optional_253434100800.apk has no usable artifacts
+04-06 19:02:31.668  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000a/dl-TfliteDynamiteDynamite.integ_252130102100800.apk has no usable artifacts
+04-06 19:02:31.668  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.apk has no usable artifacts
+04-06 19:02:31.669  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000016/dl-PlayCloudSearch.optional_260438100000.apk has no usable artifacts
+04-06 19:02:31.670  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000002/DynamiteLoader.apk has no usable artifacts
+04-06 19:02:31.671  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000005/GoogleCertificates.apk has no usable artifacts
+04-06 19:02:31.672  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000c/dl-Appsearch.optional_253434100800.apk has no usable artifacts
+04-06 19:02:31.673  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000015/dl-MlkitOcrCommon.optional_260438100800.apk has no usable artifacts
+04-06 19:02:31.674  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000013/dl-MlkitBarcodeUi.optional_260438100800.apk has no usable artifacts
+04-06 19:02:31.675  9409  9410 I artd    : GetBestInfo: vdex next to the dex file (/data/user/0/com.google.android.gms/app_dg_cache/BB2AE5A47BB198AF36C19CFD2B6407061A1BAF30/oat/x86_64/the.vdex) is kOatUpToDate with filter 'verify' executable 'false'
+04-06 19:02:31.676  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000011/dl-Appsearch.optional_260438100800.apk has no usable artifacts
+04-06 19:02:31.678  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000010/dl-VisionOcr.optional_260438100000.apk has no usable artifacts
+04-06 19:02:31.680  9409  9410 I artd    : GetBestInfo: /data/user/0/com.google.android.gms/app_dg_cache/94DF452EEF4B8E717545DCDEA6CC3C50A319A195/the.apk has no usable artifacts
+04-06 19:02:31.681  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000007/MeasurementDynamite.apk has no usable artifacts
+04-06 19:02:33.350  1529  1688 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+04-06 19:02:33.351  1529  1688 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+04-06 19:02:34.048   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:02:34.591   592 15834 W C2BqBuffer: last successful dequeue was 10130519 us ago, 877 consecutive failures
+04-06 19:02:35.950 15602 15602 D VideoPlayerUi: onClick() called with: v = [androidx.appcompat.widget.AppCompatImageButton{f98eac8 VFED..C.. ...P.... 446,224-633,382 #7f0a0326 app:id/playPauseButton}]
+04-06 19:02:35.950 15602 15602 D Player  : onPlayPause() called
+04-06 19:02:35.950 15602 15602 D Player  : play() called
+04-06 19:02:35.951   806  2380 I MediaFocusControl: requestAudioFocus() from uid/pid 10230/15602 AA=USAGE_MEDIA/CONTENT_TYPE_UNKNOWN clientId=android.media.AudioManager@5f9ee4forg.schabi.newpipe.player.helper.AudioReactor@1189a9f callingPack=org.polymorphicshade.tubular.debug req=1 flags=0x2 sdk=35
+04-06 19:02:35.952   806  2380 I AS.FadeOutManager: unfadeOutUid() uid:10230
+04-06 19:02:35.954   806  2385 W AS.PlaybackActivityMon: No piid assigned for invalid/internal port id 46
+04-06 19:02:35.958   806   825 I WifiService: acquireWifiLock uid=10230 lockMode=3 packageName=org.polymorphicshade.tubular.debug
+04-06 19:02:35.960 15602 15602 D Player  : ExoPlayer - onPlayWhenReadyChanged() called with: playWhenReady = [true], reason = [1]
+04-06 19:02:35.960 15602 15602 D Player  : ExoPlayer - updatePlaybackState() called with: playWhenReady = [true], playbackState = [3]
+04-06 19:02:35.960 15602 15602 D Player  : changeState() called with: state = [124]
+04-06 19:02:35.960   806  2369 E AppOps  : attributionTag  not declared in manifest of org.polymorphicshade.tubular.debug
+04-06 19:02:35.960 15602 15602 D Player  : onPlaying() called
+04-06 19:02:35.960 15602 15602 D NotificationUtil: updateNotification()
+04-06 19:02:35.960 12199 12199 I bluetooth: system/btif/avrcp/avrcp_service.cc:532 SendMediaUpdate: track_changed=false :  play_state=true :  queue=false
+04-06 19:02:35.961   806  2369 E AppOps  : attributionTag  not declared in manifest of org.polymorphicshade.tubular.debug
+04-06 19:02:35.963 15602 15807 D AudioTrack: getTimestamp_l(61): device stall time corrected using current time 7088283644575
+04-06 19:02:35.967 15602 15602 D Player  : saveStreamProgressState() called with: progressMillis=67931, currentMetadata=[Learn the basics of Google Antigravity]
+04-06 19:02:35.967 15602 15602 D VideoPlayerUi: hideControls() called with: duration = [0], delay = [0]
+04-06 19:02:35.968   806  2369 I MediaSessionStack: onPlaybackStateChanged - Pushing session to top | record: org.polymorphicshade.tubular.debug/MediaSessionPlayerServ/5 (userId=0)
+04-06 19:02:35.968   806  2369 D MediaSessionService: onSessionPlaybackStateChanged: record=org.polymorphicshade.tubular.debug/MediaSessionPlayerServ/5 (userId=0) playbackState=PlaybackState {state=PLAYING(3), position=67931, buffered position=118660, speed=1.0, updated=7088288, actions=2365311, custom actions=[Action:mName='Current mode: Repeat none. Toggle repeat mode., mIcon=2131230910, mExtras=null, Action:mName='Close, mIcon=2131230976, mExtras=null], active item id=0, error=null}
+04-06 19:02:35.968 12199 12199 E MediaControlProfile: onCurrentPlayerStateUpdated: base actions not supported, player actions= 0, expected at least= 7f
+04-06 19:02:35.968 12199 12199 W MediaControlGattService: Feature PLAYBACK_SPEED support: true
+04-06 19:02:35.968 12199 12199 W MediaControlGattService: Feature PLAYBACK_SPEED support: true
+04-06 19:02:35.969 12199 12199 W MediaControlGattService: Feature PLAYBACK_SPEED support: true
+04-06 19:02:35.969 12199 12199 W MediaControlGattService: Feature PLAYBACK_SPEED_NOTIFY support: true
+04-06 19:02:35.969 12199 12199 I BluetoothAdapterProperties: getBondedDevices: length=0
+04-06 19:02:35.969 12199 12199 W MediaControlGattService: Feature TRACK_POSITION support: true
+04-06 19:02:35.969 12199 12199 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+04-06 19:02:35.969 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:35.969 12199 12199 I BluetoothAdapterProperties: getBondedDevices: length=0
+04-06 19:02:35.969 12199 12199 W MediaControlGattService: Feature PLAYER_NAME support: true
+04-06 19:02:35.969 12199 12199 W MediaControlGattService: Feature PLAYER_NAME support: true
+04-06 19:02:35.970   639  2685 D NativePermissionController: checkPermission: missing 13 for 10230
+04-06 19:02:35.970   639  6360 D NativePermissionController: checkPermission: missing 13 for 10230
+04-06 19:02:35.970 12199 12199 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED support: true
+04-06 19:02:35.970 12199 12199 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED_NOTIFY support: true
+04-06 19:02:35.971   639  2685 D NativePermissionController: checkPermission: missing 13 for 10230
+04-06 19:02:35.973   639  2685 D NativePermissionController: checkPermission: missing 13 for 10230
+04-06 19:02:35.973 12199 12199 I BluetoothAdapterProperties: getBondedDevices: length=0
+04-06 19:02:35.974 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:35.974 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:35.974 12199 12199 I BluetoothAdapterProperties: getBondedDevices: length=0
+04-06 19:02:35.974 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:35.974 12199 12199 W MediaControlGattService: Feature SEEKING_SPEED support: true
+04-06 19:02:35.974 12199 12199 W MediaControlGattService: Feature SEEKING_SPEED support: true
+04-06 19:02:35.974 12199 12199 W MediaControlGattService: Feature SEEKING_SPEED support: true
+04-06 19:02:35.974 15602 15838 D BufferPoolAccessor2.0: bufferpool2 0x7a120827a8b8 : 1(8192 size) total buffers - 1(8192 size) used buffers - 621/627 (recycle/alloc) - 5/626 (fetch/transfer)
+04-06 19:02:35.975 12199 12199 W MediaControlGattService: Feature PLAYBACK_SPEED support: true
+04-06 19:02:35.975 12199 12199 W MediaControlGattService: Feature PLAYBACK_SPEED support: true
+04-06 19:02:35.975 12199 12199 W MediaControlGattService: Feature PLAYBACK_SPEED support: true
+04-06 19:02:35.975 12199 12199 W MediaControlGattService: Feature TRACK_POSITION support: true
+04-06 19:02:35.975 12199 12199 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+04-06 19:02:35.976 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:35.976 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:35.977 12199 12199 I BluetoothAdapterProperties: getBondedDevices: length=0
+04-06 19:02:35.977   806  1291 D BackgroundInstallControlService: Package event received: 0
+04-06 19:02:35.977 12199 12199 W MediaControlGattService: Feature PLAYER_NAME support: true
+04-06 19:02:35.977 12199 12199 W MediaControlGattService: Feature PLAYER_NAME support: true
+04-06 19:02:35.977 12199 12199 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED support: true
+04-06 19:02:35.977 12199 12199 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED_NOTIFY support: true
+04-06 19:02:35.978 12199 12199 I BluetoothAdapterProperties: getBondedDevices: length=0
+04-06 19:02:35.978 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:35.978 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:35.978 12199 12199 W MediaControlGattService: Feature SEEKING_SPEED support: true
+04-06 19:02:35.978 12199 12199 W MediaControlGattService: Feature SEEKING_SPEED support: true
+04-06 19:02:35.978 12199 12199 W MediaControlGattService: Feature SEEKING_SPEED support: true
+04-06 19:02:35.980   717   747 D BufferPoolAccessor2.0: bufferpool2 0x7713a64173d8 : 0(0 size) total buffers - 0(0 size) used buffers - 0/0 (recycle/alloc) - 0/0 (fetch/transfer)
+04-06 19:02:35.980 12199 12199 I bluetooth: system/btif/avrcp/avrcp_service.cc:532 SendMediaUpdate: track_changed=false :  play_state=true :  queue=false
+04-06 19:02:35.980   717   747 D BufferPoolAccessor2.0: bufferpool2 0x7713a64140f8 : 0(0 size) total buffers - 0(0 size) used buffers - 617/622 (recycle/alloc) - 6/622 (fetch/transfer)
+04-06 19:02:35.982  1340  1590 D MediaDataManager: State updated outside of notification
+04-06 19:02:35.983 15602 15833 D BufferPoolAccessor2.0: bufferpool2 0x7a12082621e8 : 4(25165824 size) total buffers - 4(25165824 size) used buffers - 402/408 (recycle/alloc) - 7/408 (fetch/transfer)
+04-06 19:02:35.986  1340  1340 W ConstraintSet: id unknown seamless_vertical_guideline
+04-06 19:02:35.986  1340  1340 W ConstraintSet: id unknown action_button_guideline
+04-06 19:02:35.986  1340  1340 W ConstraintSet: id unknown icon
+04-06 19:02:35.987  1340  1340 W ConstraintSet: id unknown device_suggestion_container
+04-06 19:02:35.987  1340  1340 W ConstraintSet: id unknown media_session_vertical_barrier
+04-06 19:02:35.987  1340  1340 W ConstraintSet: id unknown media_seamless
+04-06 19:02:35.987  1340  1340 W ConstraintSet: id unknown media_action_barrier_start
+04-06 19:02:35.987  1340  1340 W ConstraintSet: id unknown media_action_barrier_end
+04-06 19:02:35.987  1340  1340 W ConstraintSet: id unknown media_action_barrier_top
+04-06 19:02:35.987  1340  1340 W ConstraintSet: id unknown remove_text
+04-06 19:02:35.987  1340  1340 W ConstraintSet: id unknown settings
+04-06 19:02:35.987  1340  1340 W ConstraintSet: id unknown dismiss
+04-06 19:02:35.987  1340  1340 W ConstraintSet: id unknown cancel
+04-06 19:02:35.997  1340  1340 W ConstraintSet: id unknown seamless_vertical_guideline
+04-06 19:02:35.997  1340  1340 W ConstraintSet: id unknown action_button_guideline
+04-06 19:02:35.997  1340  1340 W ConstraintSet: id unknown icon
+04-06 19:02:35.997  1340  1340 W ConstraintSet: id unknown device_suggestion_container
+04-06 19:02:35.997  1340  1340 W ConstraintSet: id unknown media_session_vertical_barrier
+04-06 19:02:35.997  1340  1340 W ConstraintSet: id unknown media_seamless
+04-06 19:02:35.997  1340  1340 W ConstraintSet: id unknown media_action_barrier_start
+04-06 19:02:35.997  1340  1340 W ConstraintSet: id unknown media_action_barrier_end
+04-06 19:02:35.997  1340  1340 W ConstraintSet: id unknown media_action_barrier_top
+04-06 19:02:35.997  1340  1340 W ConstraintSet: id unknown remove_text
+04-06 19:02:35.997  1340  1340 W ConstraintSet: id unknown settings
+04-06 19:02:35.997  1340  1340 W ConstraintSet: id unknown dismiss
+04-06 19:02:35.997  1340  1340 W ConstraintSet: id unknown cancel
+04-06 19:02:36.024   639   749 D AudioFlinger: mixer(0x732e5d8bf790) throttle end: throttle time(33)
+04-06 19:02:36.173  2113  2894 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+04-06 19:02:36.173  2113  2894 I AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+04-06 19:02:36.217   639   749 D AF::Track: interceptBuffer: took 1661us to intercept 0 tracks
+04-06 19:02:36.228   639   749 D AudioFlinger: mixer(0x732e5d8bf790) throttle end: throttle time(4)
+04-06 19:02:36.399 15602 15602 D MediaSourceManager@186171489: MediaSource - loadImmediate() called
+04-06 19:02:36.399 15602 15602 D MediaSourceManager@186171489: MediaSource - maybeClearLoaders() called.
+04-06 19:02:36.399 15602 15602 D MediaSourceManager@186171489: maybeLoadItem() called.
+04-06 19:02:36.961 15602 15602 D SPONSOR_BLOCK: Hiding manual skip buttons (UNSKIP)
+04-06 19:02:37.057   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:02:37.963 15602 15602 D SPONSOR_BLOCK: Hiding manual skip buttons (UNSKIP)
+04-06 19:02:38.106 15602 15602 D BasePlayerGestListener: onDown called with e = [MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=613.95996, y[0]=299.98828, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=7090424, downTime=7090424, deviceId=4, source=0x5002, displayId=0, eventId=930865530 }]
+04-06 19:02:38.250   639   749 D AF::Track: interceptBuffer: took 1747us to intercept 0 tracks
+04-06 19:02:38.406 15602 15602 D MainPlayerGestureListener: onSingleTapConfirmed() called with: e = [MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=613.95996, y[0]=299.98828, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=7090424, downTime=7090424, deviceId=4, source=0x5002, displayId=0, eventId=930865530 }]
+04-06 19:02:38.406 15602 15602 D VideoPlayerUi: showControlsThenHide() called
+04-06 19:02:38.723 15602 15602 D VideoPlayerUi: hideControls() called with: duration = [300], delay = [2000]
+04-06 19:02:38.962 15602 15602 D SPONSOR_BLOCK: Hiding manual skip buttons (UNSKIP)
+04-06 19:02:39.750 15602 15602 D VideoPlayerUi: onClick() called with: v = [android.widget.TextView{d5aa7bd VFED..C.. ...P.... 891,0-996,97 #7f0a0454 app:id/translateButton}]
+04-06 19:02:39.757 15602 15602 D VideoPlayerUi: hideControls() called with: duration = [300], delay = [2000]
+04-06 19:02:39.758   806   825 W AS.PlaybackActivityMon: No piid assigned for invalid/internal port id 46
+04-06 19:02:39.758 15602 15715 D YandexTranslation: Starting translation for: https://www.youtube.com/watch?v=nTOVIGsqCuY
+04-06 19:02:39.759 15602 15715 D YandexTranslation: Request: url=https://www.youtube.com/watch?v=nTOVIGsqCuY, from=en, to=ru, bodySize=73
+04-06 19:02:39.834 15602 15715 D YandexTranslation: Response size: 105 bytes. Hex: 20003A093337363638323437374A56D092D0BED0B7D0BDD0B8D0BAD0BBD0B020D0BED188D0B8D0B1D0BAD0B020D0BFD180D0B820D0BFD0B5D180D0B5D0B2D0BED0B4D0B52C20D0BFD0BED0BFD180D0BED0B1D183D0B9D182D0B520D0BFD0BED0B7D0B6D0B550006001
+04-06 19:02:39.835 15602 15715 D YandexTranslation: Parsed response: status=0, url=null, duration=0.0, remaining=0, error=Возникла ошибка при переводе, попробуйте позже
+04-06 19:02:39.900  6630 15582 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 7632221]
+04-06 19:02:39.906  6630 15582 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 7632226]
+04-06 19:02:39.961 15602 15602 D SPONSOR_BLOCK: Hiding manual skip buttons (UNSKIP)
+04-06 19:02:40.065   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:02:40.672   639   749 D AF::Track: interceptBuffer: took 606us to intercept 0 tracks
+04-06 19:02:40.962 15602 15602 D SPONSOR_BLOCK: Hiding manual skip buttons (UNSKIP)
+04-06 19:02:41.092 15602 15829 D BufferPoolAccessor2.0: bufferpool2 0x7a12082621e8 : 5(31457280 size) total buffers - 4(25165824 size) used buffers - 524/531 (recycle/alloc) - 8/530 (fetch/transfer)
+04-06 19:02:41.356 15602 15838 D BufferPoolAccessor2.0: bufferpool2 0x7a120827a8b8 : 5(40960 size) total buffers - 1(8192 size) used buffers - 851/861 (recycle/alloc) - 10/860 (fetch/transfer)
+04-06 19:02:41.371   717 15839 D BufferPoolAccessor2.0: bufferpool2 0x7713a64140f8 : 4(16384 size) total buffers - 1(4096 size) used buffers - 848/857 (recycle/alloc) - 10/856 (fetch/transfer)
+04-06 19:02:41.555 15887 15887 W libbinder.BackendUnifiedServiceManager: Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: package
+04-06 19:02:41.664  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
+04-06 19:02:41.666  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_AdsDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:41.668  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_CronetDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:41.670  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteLoader_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:41.675  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteModulesA_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:41.676  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteModulesC_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:41.678  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_GoogleCertificates_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:41.680  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_MapsDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:41.682  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_MeasurementDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:41.684  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_all_locale_splits.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:41.686  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000d/dl-PlayCloudSearch.optional_253434100000.apk has no usable artifacts
+04-06 19:02:41.687  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000b/dl-MlkitBarcodeUi.optional_253434100800.apk has no usable artifacts
+04-06 19:02:41.694  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000a/dl-TfliteDynamiteDynamite.integ_252130102100800.apk has no usable artifacts
+04-06 19:02:41.695  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.apk has no usable artifacts
+04-06 19:02:41.696  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000016/dl-PlayCloudSearch.optional_260438100000.apk has no usable artifacts
+04-06 19:02:41.697  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000002/DynamiteLoader.apk has no usable artifacts
+04-06 19:02:41.706  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000005/GoogleCertificates.apk has no usable artifacts
+04-06 19:02:41.707  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000c/dl-Appsearch.optional_253434100800.apk has no usable artifacts
+04-06 19:02:41.709  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000015/dl-MlkitOcrCommon.optional_260438100800.apk has no usable artifacts
+04-06 19:02:41.710  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000013/dl-MlkitBarcodeUi.optional_260438100800.apk has no usable artifacts
+04-06 19:02:41.712  9409  9410 I artd    : GetBestInfo: vdex next to the dex file (/data/user/0/com.google.android.gms/app_dg_cache/BB2AE5A47BB198AF36C19CFD2B6407061A1BAF30/oat/x86_64/the.vdex) is kOatUpToDate with filter 'verify' executable 'false'
+04-06 19:02:41.714  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000011/dl-Appsearch.optional_260438100800.apk has no usable artifacts
+04-06 19:02:41.715  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000010/dl-VisionOcr.optional_260438100000.apk has no usable artifacts
+04-06 19:02:41.716  9409  9410 I artd    : GetBestInfo: /data/user/0/com.google.android.gms/app_dg_cache/94DF452EEF4B8E717545DCDEA6CC3C50A319A195/the.apk has no usable artifacts
+04-06 19:02:41.717  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000007/MeasurementDynamite.apk has no usable artifacts
+04-06 19:02:41.963 15602 15602 D SPONSOR_BLOCK: Hiding manual skip buttons (UNSKIP)
+04-06 19:02:42.382   806  2369 W NotificationService: Toast already killed. pkg=org.polymorphicshade.tubular.debug token=android.os.BinderProxy@508bbe
+04-06 19:02:42.466   639   749 D AF::Track: interceptBuffer: took 3705us to intercept 0 tracks
+04-06 19:02:42.962 15602 15602 D SPONSOR_BLOCK: Hiding manual skip buttons (UNSKIP)
+04-06 19:02:43.074   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:02:43.351  1529  1688 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+04-06 19:02:43.351  1529  1688 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+04-06 19:02:43.460   639   749 D AF::Track: interceptBuffer: took 593us to intercept 0 tracks
+04-06 19:02:43.576   639   749 D AF::Track: interceptBuffer: took 3892us to intercept 0 tracks
+04-06 19:02:43.961 15602 15602 D SPONSOR_BLOCK: Hiding manual skip buttons (UNSKIP)
+04-06 19:02:44.963 15602 15602 D SPONSOR_BLOCK: Hiding manual skip buttons (UNSKIP)
+04-06 19:02:44.994   806   834 I DisplayDeviceRepository: Display device changed render timings: "Built-in Screen", renderFrameRate=60.000004, presentationDeadlineNanos=16666666, appVsyncOffsetNanos=1000000, frameRateOverrides=[{uid=10230 frameRateHz=60.000004}]
+04-06 19:02:45.503   639   749 D AF::Track: interceptBuffer: took 955us to intercept 0 tracks
+04-06 19:02:45.728 15602 15602 D BasePlayerGestListener: onDown called with e = [MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=559.97363, y[0]=270.98438, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=7098046, downTime=7098046, deviceId=4, source=0x5002, displayId=0, eventId=895578351 }]
+04-06 19:02:45.728   806   834 I DisplayDeviceRepository: Display device changed render timings: "Built-in Screen", renderFrameRate=60.000004, presentationDeadlineNanos=16666666, appVsyncOffsetNanos=1000000, frameRateOverrides=[]
+04-06 19:02:45.965 15602 15602 D SPONSOR_BLOCK: Hiding manual skip buttons (UNSKIP)
+04-06 19:02:46.028 15602 15602 D MainPlayerGestureListener: onSingleTapConfirmed() called with: e = [MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=559.97363, y[0]=270.98438, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=7098046, downTime=7098046, deviceId=4, source=0x5002, displayId=0, eventId=895578351 }]
+04-06 19:02:46.028 15602 15602 D VideoPlayerUi: showControlsThenHide() called
+04-06 19:02:46.084   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:02:46.226 15602 15828 D BufferPoolAccessor2.0: bufferpool2 0x7a12082621e8 : 5(31457280 size) total buffers - 4(25165824 size) used buffers - 647/654 (recycle/alloc) - 8/654 (fetch/transfer)
+04-06 19:02:46.344 15602 15602 D VideoPlayerUi: hideControls() called with: duration = [300], delay = [2000]
+04-06 19:02:46.413 15602 15838 D BufferPoolAccessor2.0: bufferpool2 0x7a120827a8b8 : 5(40960 size) total buffers - 1(8192 size) used buffers - 1068/1078 (recycle/alloc) - 10/1077 (fetch/transfer)
+04-06 19:02:46.416   717 15839 D BufferPoolAccessor2.0: bufferpool2 0x7713a64140f8 : 4(16384 size) total buffers - 1(4096 size) used buffers - 1065/1074 (recycle/alloc) - 11/1073 (fetch/transfer)
+04-06 19:02:46.468   806  2287 W NotificationService: Toast already killed. pkg=org.polymorphicshade.tubular.debug token=android.os.BinderProxy@5e4b7b1
+04-06 19:02:46.634   639   749 D AF::Track: interceptBuffer: took 1386us to intercept 0 tracks
+04-06 19:02:46.909 15602 15602 D VideoPlayerUi: onClick() called with: v = [androidx.appcompat.widget.AppCompatImageButton{f98eac8 VFED..C.. ...P.... 446,224-633,382 #7f0a0326 app:id/playPauseButton}]
+04-06 19:02:46.910 15602 15602 D Player  : onPlayPause() called
+04-06 19:02:46.910 15602 15602 D Player  : pause() called
+04-06 19:02:46.911   806  2287 I MediaFocusControl: abandonAudioFocus() from uid/pid 10230/15602 clientId=android.media.AudioManager@5f9ee4forg.schabi.newpipe.player.helper.AudioReactor@1189a9f callingPack=org.polymorphicshade.tubular.debug
+04-06 19:02:46.913   806  2287 I WifiService: releaseWifiLock uid=10230
+04-06 19:02:46.913   806  2380 W AS.PlaybackActivityMon: No piid assigned for invalid/internal port id 46
+04-06 19:02:46.915 15602 15602 D Player  : ExoPlayer - onPlayWhenReadyChanged() called with: playWhenReady = [false], reason = [1]
+04-06 19:02:46.915 15602 15602 D Player  : ExoPlayer - updatePlaybackState() called with: playWhenReady = [false], playbackState = [3]
+04-06 19:02:46.915 15602 15602 D Player  : changeState() called with: state = [126]
+04-06 19:02:46.915 15602 15602 D Player  : onPaused() called
+04-06 19:02:46.916   806  2287 E AppOps  : attributionTag  not declared in manifest of org.polymorphicshade.tubular.debug
+04-06 19:02:46.916 15602 15602 D NotificationUtil: updateNotification()
+04-06 19:02:46.917   806  2287 E AppOps  : attributionTag  not declared in manifest of org.polymorphicshade.tubular.debug
+04-06 19:02:46.926 12199 12199 I MediaPlayerList: updateMediaForAudioPlayback: Active player is playing, drop it
+04-06 19:02:46.928 12199 12199 I MediaPlayerList: updateMediaForAudioPlayback: Active player is playing, drop it
+04-06 19:02:46.930 15602 15602 D VideoPlayerUi: showControls() called
+04-06 19:02:46.933 15602 15602 D Player  : saveStreamProgressState() called with: progressMillis=78941, currentMetadata=[Learn the basics of Google Antigravity]
+04-06 19:02:46.934   806  2369 D MediaSessionService: onSessionPlaybackStateChanged: record=org.polymorphicshade.tubular.debug/MediaSessionPlayerServ/5 (userId=0) playbackState=PlaybackState {state=PAUSED(2), position=78941, buffered position=129629, speed=0.0, updated=7099254, actions=2365311, custom actions=[Action:mName='Current mode: Repeat none. Toggle repeat mode., mIcon=2131230910, mExtras=null, Action:mName='Close, mIcon=2131230976, mExtras=null], active item id=0, error=null}
+04-06 19:02:46.935   806  1291 D BackgroundInstallControlService: Package event received: 0
+04-06 19:02:46.937 12199 12199 I bluetooth: system/btif/avrcp/avrcp_service.cc:532 SendMediaUpdate: track_changed=false :  play_state=true :  queue=false
+04-06 19:02:46.941 12199 12199 W MediaControlGattService: Feature PLAYBACK_SPEED support: true
+04-06 19:02:46.941 12199 12199 W MediaControlGattService: Feature PLAYBACK_SPEED support: true
+04-06 19:02:46.941 12199 12199 W MediaControlGattService: Feature PLAYBACK_SPEED support: true
+04-06 19:02:46.941 12199 12199 W MediaControlGattService: Feature PLAYBACK_SPEED_NOTIFY support: true
+04-06 19:02:46.942 12199 12199 I BluetoothAdapterProperties: getBondedDevices: length=0
+04-06 19:02:46.942 12199 12199 W MediaControlGattService: Feature TRACK_POSITION support: true
+04-06 19:02:46.942 12199 12199 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+04-06 19:02:46.942 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:46.942 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:46.943 12199 12199 I BluetoothAdapterProperties: getBondedDevices: length=0
+04-06 19:02:46.943 12199 12199 W MediaControlGattService: Feature PLAYER_NAME support: true
+04-06 19:02:46.943 12199 12199 W MediaControlGattService: Feature PLAYER_NAME support: true
+04-06 19:02:46.943 12199 12199 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED support: true
+04-06 19:02:46.943 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:46.943 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:46.944 12199 12199 I BluetoothAdapterProperties: getBondedDevices: length=0
+04-06 19:02:46.944 12199 12199 W MediaControlGattService: Feature MEDIA_STATE support: true
+04-06 19:02:46.944 12199 12199 W MediaControlGattService: Feature SEEKING_SPEED support: true
+04-06 19:02:46.944 12199 12199 W MediaControlGattService: Feature SEEKING_SPEED support: true
+04-06 19:02:46.944 12199 12199 W MediaControlGattService: Feature SEEKING_SPEED support: true
+04-06 19:02:46.945  1340  1590 D MediaDataManager: State updated outside of notification
+04-06 19:02:46.949  1340  1340 W ConstraintSet: id unknown seamless_vertical_guideline
+04-06 19:02:46.949  1340  1340 W ConstraintSet: id unknown action_button_guideline
+04-06 19:02:46.949  1340  1340 W ConstraintSet: id unknown icon
+04-06 19:02:46.949  1340  1340 W ConstraintSet: id unknown device_suggestion_container
+04-06 19:02:46.949  1340  1340 W ConstraintSet: id unknown media_session_vertical_barrier
+04-06 19:02:46.949  1340  1340 W ConstraintSet: id unknown media_seamless
+04-06 19:02:46.950  1340  1340 W ConstraintSet: id unknown media_action_barrier_start
+04-06 19:02:46.950  1340  1340 W ConstraintSet: id unknown media_action_barrier_end
+04-06 19:02:46.950  1340  1340 W ConstraintSet: id unknown media_action_barrier_top
+04-06 19:02:46.950  1340  1340 W ConstraintSet: id unknown remove_text
+04-06 19:02:46.950  1340  1340 W ConstraintSet: id unknown settings
+04-06 19:02:46.950  1340  1340 W ConstraintSet: id unknown dismiss
+04-06 19:02:46.950  1340  1340 W ConstraintSet: id unknown cancel
+04-06 19:02:46.954  1340  1340 W ConstraintSet: id unknown seamless_vertical_guideline
+04-06 19:02:46.954  1340  1340 W ConstraintSet: id unknown action_button_guideline
+04-06 19:02:46.954  1340  1340 W ConstraintSet: id unknown icon
+04-06 19:02:46.954  1340  1340 W ConstraintSet: id unknown device_suggestion_container
+04-06 19:02:46.954  1340  1340 W ConstraintSet: id unknown media_session_vertical_barrier
+04-06 19:02:46.955  1340  1340 W ConstraintSet: id unknown media_seamless
+04-06 19:02:46.955  1340  1340 W ConstraintSet: id unknown media_action_barrier_start
+04-06 19:02:46.955  1340  1340 W ConstraintSet: id unknown media_action_barrier_end
+04-06 19:02:46.955  1340  1340 W ConstraintSet: id unknown media_action_barrier_top
+04-06 19:02:46.955  1340  1340 W ConstraintSet: id unknown remove_text
+04-06 19:02:46.955  1340  1340 W ConstraintSet: id unknown settings
+04-06 19:02:46.955  1340  1340 W ConstraintSet: id unknown dismiss
+04-06 19:02:46.955  1340  1340 W ConstraintSet: id unknown cancel
+04-06 19:02:47.135  2113  2894 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+04-06 19:02:47.135  2113  2894 I AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+04-06 19:02:47.348 15602 15602 D MediaSourceManager@186171489: MediaSource - loadImmediate() called
+04-06 19:02:47.348 15602 15602 D MediaSourceManager@186171489: MediaSource - maybeClearLoaders() called.
+04-06 19:02:47.348 15602 15602 D MediaSourceManager@186171489: maybeLoadItem() called.
+04-06 19:02:49.090   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:02:49.617   592 15834 W C2BqBuffer: last successful dequeue was 2649038 us ago, 230 consecutive failures
+04-06 19:02:50.020   587  7533 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 38443392
+04-06 19:02:50.020   587  7533 D android.hardware.audio@7.1-impl.ranchu: ~TinyalsaSink: joining consumeThread
+04-06 19:02:50.030   587 15874 D android.hardware.audio@7.1-impl.ranchu: consumeThread: exiting
+04-06 19:02:50.031   587  7533 D android.hardware.audio@7.1-impl.ranchu: ~TinyalsaSink: stopping PCM stream
+04-06 19:02:51.547 15892 15892 W libbinder.BackendUnifiedServiceManager: Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: package
+04-06 19:02:51.654  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
+04-06 19:02:51.657  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_AdsDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:51.659  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_CronetDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:51.661  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteLoader_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:51.662  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteModulesA_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:51.663  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteModulesC_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:51.665  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_GoogleCertificates_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:51.666  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_MapsDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:51.668  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_MeasurementDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:51.670  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_all_locale_splits.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:02:51.671  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000d/dl-PlayCloudSearch.optional_253434100000.apk has no usable artifacts
+04-06 19:02:51.673  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000b/dl-MlkitBarcodeUi.optional_253434100800.apk has no usable artifacts
+04-06 19:02:51.675  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000a/dl-TfliteDynamiteDynamite.integ_252130102100800.apk has no usable artifacts
+04-06 19:02:51.675  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.apk has no usable artifacts
+04-06 19:02:51.677  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000016/dl-PlayCloudSearch.optional_260438100000.apk has no usable artifacts
+04-06 19:02:51.677  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000002/DynamiteLoader.apk has no usable artifacts
+04-06 19:02:51.678  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000005/GoogleCertificates.apk has no usable artifacts
+04-06 19:02:51.679  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000c/dl-Appsearch.optional_253434100800.apk has no usable artifacts
+04-06 19:02:51.681  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000015/dl-MlkitOcrCommon.optional_260438100800.apk has no usable artifacts
+04-06 19:02:51.682  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000013/dl-MlkitBarcodeUi.optional_260438100800.apk has no usable artifacts
+04-06 19:02:51.684  9409  9410 I artd    : GetBestInfo: vdex next to the dex file (/data/user/0/com.google.android.gms/app_dg_cache/BB2AE5A47BB198AF36C19CFD2B6407061A1BAF30/oat/x86_64/the.vdex) is kOatUpToDate with filter 'verify' executable 'false'
+04-06 19:02:51.685  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000011/dl-Appsearch.optional_260438100800.apk has no usable artifacts
+04-06 19:02:51.687  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000010/dl-VisionOcr.optional_260438100000.apk has no usable artifacts
+04-06 19:02:51.688  9409  9410 I artd    : GetBestInfo: /data/user/0/com.google.android.gms/app_dg_cache/94DF452EEF4B8E717545DCDEA6CC3C50A319A195/the.apk has no usable artifacts
+04-06 19:02:51.690  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000007/MeasurementDynamite.apk has no usable artifacts
+04-06 19:02:51.997 15602 15832 D BufferPoolAccessor2.0: bufferpool2 0x7a12082621e8 : 5(31457280 size) total buffers - 4(25165824 size) used buffers - 665/672 (recycle/alloc) - 9/672 (fetch/transfer)
+04-06 19:02:51.997 15602 15832 D BufferPoolAccessor2.0: bufferpool2 0x7a120827a8b8 : 5(40960 size) total buffers - 0(0 size) used buffers - 1092/1102 (recycle/alloc) - 10/1102 (fetch/transfer)
+04-06 19:02:51.997 15602 15832 D BufferPoolAccessor2.0: evictor expired: 2, evicted: 2
+04-06 19:02:52.005   717   754 D BufferPoolAccessor2.0: bufferpool2 0x7713a64140f8 : 4(16384 size) total buffers - 1(4096 size) used buffers - 1089/1098 (recycle/alloc) - 11/1098 (fetch/transfer)
+04-06 19:02:52.005   717   754 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+04-06 19:02:52.096   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:02:53.351  1529  1688 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+04-06 19:02:53.352  1529  1688 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+04-06 19:02:54.622   592 15834 W C2BqBuffer: last successful dequeue was 7653808 us ago, 661 consecutive failures
+04-06 19:02:55.103   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:02:55.530   806  2287 D WifiNl80211Manager: Scan result ready event
+04-06 19:02:55.530   806  2287 D WifiNative: Scan result ready event
+04-06 19:02:55.538  6630  6734 I WifiScanner: onFullResults
+04-06 19:02:55.538  6630 10497 I WifiScanner: onFullResults
+04-06 19:02:55.540   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:02:58.108   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:02:59.625   592 15834 W C2BqBuffer: last successful dequeue was 12656708 us ago, 1102 consecutive failures
+04-06 19:03:01.115   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:03:01.541 15895 15895 W libbinder.BackendUnifiedServiceManager: Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: package
+04-06 19:03:01.649  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
+04-06 19:03:01.651  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_AdsDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:03:01.652  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_CronetDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:03:01.654  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteLoader_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:03:01.655  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteModulesA_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:03:01.656  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteModulesC_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:03:01.658  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_GoogleCertificates_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:03:01.660  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_MapsDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:03:01.661  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_MeasurementDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:03:01.663  9409  9410 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_all_locale_splits.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:03:01.665  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000d/dl-PlayCloudSearch.optional_253434100000.apk has no usable artifacts
+04-06 19:03:01.667  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000b/dl-MlkitBarcodeUi.optional_253434100800.apk has no usable artifacts
+04-06 19:03:01.669  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000a/dl-TfliteDynamiteDynamite.integ_252130102100800.apk has no usable artifacts
+04-06 19:03:01.669  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.apk has no usable artifacts
+04-06 19:03:01.670  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000016/dl-PlayCloudSearch.optional_260438100000.apk has no usable artifacts
+04-06 19:03:01.671  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000002/DynamiteLoader.apk has no usable artifacts
+04-06 19:03:01.671  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000005/GoogleCertificates.apk has no usable artifacts
+04-06 19:03:01.672  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000c/dl-Appsearch.optional_253434100800.apk has no usable artifacts
+04-06 19:03:01.673  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000015/dl-MlkitOcrCommon.optional_260438100800.apk has no usable artifacts
+04-06 19:03:01.674  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000013/dl-MlkitBarcodeUi.optional_260438100800.apk has no usable artifacts
+04-06 19:03:01.676  9409  9410 I artd    : GetBestInfo: vdex next to the dex file (/data/user/0/com.google.android.gms/app_dg_cache/BB2AE5A47BB198AF36C19CFD2B6407061A1BAF30/oat/x86_64/the.vdex) is kOatUpToDate with filter 'verify' executable 'false'
+04-06 19:03:01.677  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000011/dl-Appsearch.optional_260438100800.apk has no usable artifacts
+04-06 19:03:01.678  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000010/dl-VisionOcr.optional_260438100000.apk has no usable artifacts
+04-06 19:03:01.679  9409  9410 I artd    : GetBestInfo: /data/user/0/com.google.android.gms/app_dg_cache/94DF452EEF4B8E717545DCDEA6CC3C50A319A195/the.apk has no usable artifacts
+04-06 19:03:01.680  9409  9410 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000007/MeasurementDynamite.apk has no usable artifacts
+04-06 19:03:03.351  1529  1688 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+04-06 19:03:03.352  1529  1688 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+04-06 19:03:04.123   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:03:04.625   592 15834 W C2BqBuffer: last successful dequeue was 17656938 us ago, 1545 consecutive failures

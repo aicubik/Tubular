@@ -2067,7 +2067,7 @@ public final class Player implements PlaybackListener, Listener {
             final double durationSecs = (double) currentMetadata.getDurationSeconds();
             translationJob =
                     translationService.translateVideo(
-                            finalUrl, durationSecs, "en", "ru", cb,
+                            finalUrl, durationSecs, getVideoTitle(), "en", "ru", cb,
                             kotlinx.coroutines
                                     .GlobalScope
                                     .INSTANCE);

@@ -17,30 +17,53 @@ import kotlinx.coroutines.withContext
 
 /**
  * Service for translating YouTube videos via Yandex Browser's internal API.
- * Includes modifications based on decompiled successful implementations.
+ * Fully aligned with FOSWLY/vot.js (Voice Over Translation) library.
+ *
+ * Flow:
+ * 1. Create session via /session/create (get secretKey + uuid)
+ * 2. Build protobuf request body
+ * 3. Sign with Vtrans-Signature, Sec-Vtrans-Sk, Sec-Vtrans-Token
+ * 4. POST to /video-translation/translate
  */
 class YandexTranslationService {
 
     companion object {
         private const val TAG = "YandexTranslation"
 
-        // Working HMAC key extracted from Orfeev's NewPipe build
+        // HMAC key from VOT config
         private const val HMAC_KEY = "bt8xH3VOlb4mqf0nqAibnDOoiPlXsisf"
 
-        // Yandex Browser API endpoint
-        private const val API_URL =
-            "https://api.browser.yandex.ru/video-translation/translate"
+        // Base API host
+        private const val API_HOST = "https://api.browser.yandex.ru"
 
-        // User-Agent string from Orfeev's implementation
+        // Paths (matching vot.js)
+        private const val SESSION_PATH = "/session/create"
+        private const val TRANSLATE_PATH = "/video-translation/translate"
+
+        // User-Agent matching vot.js config
         private const val USER_AGENT =
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
                 "AppleWebKit/537.36 (KHTML, like Gecko) " +
-                "Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36"
+                "Chrome/146.0.0.0 YaBrowser/26.3.1.981 " +
+                "Yowser/2.5 Safari/537.36"
 
-        // Polling settings
+        // Component version matching vot.js config
+        private const val COMPONENT_VERSION = "26.3.1.981"
+
         private const val POLL_INTERVAL_MS = 5000L
         private const val MAX_POLL_ATTEMPTS = 60
     }
+
+    // --- Session state ---
+    private data class VtransSession(
+        val uuid: String,
+        val secretKey: String,
+        val expires: Long,
+        val createdAt: Long
+    )
+
+    @Volatile
+    private var currentSession: VtransSession? = null
 
     sealed class TranslationResult {
         data class Success(
@@ -48,7 +71,9 @@ class YandexTranslationService {
             val duration: Double
         ) : TranslationResult()
         data class InProgress(
-            val remainingTime: Int
+            val remainingTime: Int,
+            val status: Int,
+            val translationId: String?
         ) : TranslationResult()
         data class Error(
             val message: String
@@ -64,6 +89,7 @@ class YandexTranslationService {
     fun translateVideo(
         videoUrl: String,
         durationSeconds: Double,
+        videoTitle: String,
         fromLanguage: String = "en",
         toLanguage: String = "ru",
         callback: TranslationCallback,
@@ -71,35 +97,45 @@ class YandexTranslationService {
     ): Job {
         return scope.launch {
             try {
-                Log.d(TAG, "Starting translation for: $videoUrl")
+                val shortenedUrl = shortenYouTubeUrl(videoUrl)
+                Log.d(TAG, "Starting translation for: $shortenedUrl ($videoTitle)")
                 var attempts = 0
+                var hasSentFailAudio = false
 
                 while (attempts < MAX_POLL_ATTEMPTS) {
                     val result = makeTranslationRequest(
-                        videoUrl = videoUrl,
+                        videoUrl = shortenedUrl,
                         duration = durationSeconds,
+                        videoTitle = videoTitle,
                         fromLang = fromLanguage,
-                        toLang = toLanguage
+                        toLang = toLanguage,
+                        firstRequest = (attempts == 0)
                     )
 
                     when (result) {
                         is TranslationResult.Success -> {
                             withContext(Dispatchers.Main) {
-                                callback.onSuccess(
-                                    result.audioUrl,
-                                    result.duration
-                                )
+                                callback.onSuccess(result.audioUrl, result.duration)
                             }
                             return@launch
                         }
 
                         is TranslationResult.InProgress -> {
                             withContext(Dispatchers.Main) {
-                                callback.onProgress(
-                                    "Processing...",
-                                    result.remainingTime
-                                )
+                                callback.onProgress("Processing...", result.remainingTime)
                             }
+
+                            // Handle AUDIO_REQUESTED (6) by sending fake audio requests (fallback)
+                            if (result.status == 6 && !hasSentFailAudio) {
+                                hasSentFailAudio = true
+                                Log.d(TAG, "Status 6 (AUDIO_REQUESTED) - executing fallback...")
+                                val session = getOrCreateSession()
+                                requestFailAudio(session, shortenedUrl)
+                                if (result.translationId != null) {
+                                    requestAudioEmpty(session, shortenedUrl, result.translationId)
+                                }
+                            }
+
                             delay(POLL_INTERVAL_MS)
                             attempts++
                         }
@@ -114,38 +150,43 @@ class YandexTranslationService {
                 }
 
                 withContext(Dispatchers.Main) {
-                    callback.onError(
-                        "Translation timed out after " +
-                            "${MAX_POLL_ATTEMPTS * POLL_INTERVAL_MS / 1000}s"
-                    )
+                    val seconds = MAX_POLL_ATTEMPTS * POLL_INTERVAL_MS / 1000
+                    callback.onError("Translation timed out after ${seconds}s")
                 }
             } catch (e: Exception) {
                 Log.e(TAG, "Translation failed", e)
                 withContext(Dispatchers.Main) {
-                    callback.onError(
-                        "Translation error: ${e.message}"
-                    )
+                    callback.onError("Translation error: ${e.message}")
                 }
             }
         }
     }
 
-    private fun makeTranslationRequest(
-        videoUrl: String,
-        duration: Double,
-        fromLang: String,
-        toLang: String
-    ): TranslationResult {
-        val requestBody = buildProtobufRequest(videoUrl, duration, fromLang, toLang)
-        val signature = signBody(requestBody)
+    // =========================================================================
+    // Session management (matches vot.js MinimalClient.getSession/createSession)
+    // =========================================================================
 
-        Log.d(
-            TAG,
-            "Request: url=$videoUrl, from=$fromLang, to=$toLang, " +
-                "bodySize=${requestBody.size}"
-        )
+    @Synchronized
+    private fun getOrCreateSession(): VtransSession {
+        val session = currentSession
+        val now = System.currentTimeMillis() / 1000
+        if (session != null && session.createdAt + session.expires > now) {
+            return session
+        }
 
-        val url = URL(API_URL)
+        Log.d(TAG, "Creating new Vtrans session...")
+        val newSession = createSession()
+        currentSession = newSession
+        Log.d(TAG, "Session created: uuid=${newSession.uuid}, expires=${newSession.expires}")
+        return newSession
+    }
+
+    private fun createSession(): VtransSession {
+        val uuid = generateUUID()
+        val body = encodeSessionRequest(uuid, "video-translation")
+        val signature = hmacSign(body)
+
+        val url = URL("$API_HOST$SESSION_PATH")
         val conn = url.openConnection() as HttpURLConnection
 
         try {
@@ -154,13 +195,16 @@ class YandexTranslationService {
                 doOutput = true
                 connectTimeout = 15000
                 readTimeout = 15000
-                setRequestProperty("Accept", "application/x-protobuf")
                 setRequestProperty("Content-Type", "application/x-protobuf")
+                setRequestProperty("Accept", "application/x-protobuf")
                 setRequestProperty("User-Agent", USER_AGENT)
+                setRequestProperty("Accept-Language", "en")
+                setRequestProperty("Pragma", "no-cache")
+                setRequestProperty("Cache-Control", "no-cache")
                 setRequestProperty("Vtrans-Signature", signature)
             }
 
-            conn.outputStream.use { it.write(requestBody) }
+            conn.outputStream.use { it.write(body) }
 
             val responseCode = conn.responseCode
             if (responseCode != 200) {
@@ -169,164 +213,421 @@ class YandexTranslationService {
                 } catch (_: Exception) {
                     "unreadable"
                 }
-                Log.e(TAG, "HTTP $responseCode, error body: $errBody")
+                Log.e(TAG, "Session create failed: HTTP $responseCode, $errBody")
+                throw RuntimeException("Session create failed: HTTP $responseCode")
+            }
+
+            val responseBytes = conn.inputStream.use { it.readBytes() }
+            return decodeSessionResponse(responseBytes, uuid)
+        } finally {
+            conn.disconnect()
+        }
+    }
+
+    /**
+     * Encode session request protobuf:
+     * field 1 (string): uuid
+     * field 2 (string): module
+     */
+    private fun encodeSessionRequest(uuid: String, module: String): ByteArray {
+        val baos = ByteArrayOutputStream()
+        writeString(baos, 1, uuid)
+        writeString(baos, 2, module)
+        return baos.toByteArray()
+    }
+
+    /**
+     * Decode session response protobuf:
+     * field 1 (string): secretKey
+     * field 2 (varint): expires
+     */
+    private fun decodeSessionResponse(data: ByteArray, uuid: String): VtransSession {
+        var secretKey = ""
+        var expires = 0L
+        var offset = 0
+
+        try {
+            while (offset < data.size) {
+                val (tag, newOff1) = readVarint(data, offset)
+                offset = newOff1
+                val fieldNumber = (tag shr 3).toInt()
+                val wireType = (tag and 0x07).toInt()
+
+                when (wireType) {
+                    0 -> {
+                        val (value, newOff2) = readVarint(data, offset)
+                        offset = newOff2
+                        if (fieldNumber == 2) expires = value
+                    }
+
+                    2 -> {
+                        val (len, newOff3) = readVarint(data, offset)
+                        offset = newOff3
+                        val length = len.toInt()
+                        if (offset + length <= data.size) {
+                            val str = String(data, offset, length, Charsets.UTF_8)
+                            if (fieldNumber == 1) secretKey = str
+                        }
+                        offset += length
+                    }
+
+                    1 -> offset += 8
+
+                    5 -> offset += 4
+
+                    else -> { /* skip */ }
+                }
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "Error parsing session response", e)
+        }
+
+        if (secretKey.isEmpty()) {
+            throw RuntimeException("No secretKey in session response")
+        }
+
+        return VtransSession(
+            uuid = uuid,
+            secretKey = secretKey,
+            expires = expires,
+            createdAt = System.currentTimeMillis() / 1000
+        )
+    }
+
+    // =========================================================================
+    // Sec-Vtrans headers (matches vot.js getSecYaHeaders)
+    // =========================================================================
+
+    /**
+     * Generates the 3 security headers required by the API:
+     *   Vtrans-Signature: HMAC-SHA256 of the request body
+     *   Sec-Vtrans-Sk: secretKey from session
+     *   Sec-Vtrans-Token: HMAC(uuid:path:version):uuid:path:version
+     */
+    private fun buildSecHeaders(
+        session: VtransSession,
+        requestBody: ByteArray,
+        path: String
+    ): Map<String, String> {
+        val bodySignature = hmacSign(requestBody)
+
+        // Build token: uuid:path:componentVersion
+        val token = "${session.uuid}:$path:$COMPONENT_VERSION"
+        val tokenBytes = token.toByteArray(Charsets.UTF_8)
+        val tokenSign = hmacSign(tokenBytes)
+
+        return mapOf(
+            "Vtrans-Signature" to bodySignature,
+            "Sec-Vtrans-Sk" to session.secretKey,
+            "Sec-Vtrans-Token" to "$tokenSign:$token"
+        )
+    }
+
+    private fun requestFailAudio(session: VtransSession, videoUrl: String) {
+        val path = "/video-translation/fail-audio-js"
+        val body = """{"video_url":"$videoUrl"}""".toByteArray(Charsets.UTF_8)
+        val secHeaders = buildSecHeaders(session, body, path)
+
+        val url = URL("$API_HOST$path")
+        val conn = url.openConnection() as HttpURLConnection
+        try {
+            conn.requestMethod = "PUT"
+            conn.doOutput = true
+            conn.connectTimeout = 15000
+            conn.readTimeout = 15000
+            conn.setRequestProperty("Content-Type", "application/json")
+            conn.setRequestProperty("User-Agent", USER_AGENT)
+            secHeaders.forEach { (k, v) -> conn.setRequestProperty(k, v) }
+
+            conn.outputStream.use { it.write(body) }
+            val code = conn.responseCode
+            Log.d(TAG, "fail-audio-js: HTTP $code")
+        } catch (e: Exception) {
+            Log.e(TAG, "fail-audio-js error", e)
+        } finally {
+            conn.disconnect()
+        }
+    }
+
+    private fun requestAudioEmpty(session: VtransSession, videoUrl: String, translationId: String) {
+        val path = "/video-translation/audio"
+        val audioInfoBaos = ByteArrayOutputStream()
+        writeString(audioInfoBaos, 1, "web_api_get_all_generating_urls_data_from_iframe")
+        val audioInfoBytes = audioInfoBaos.toByteArray()
+
+        val reqBaos = ByteArrayOutputStream()
+        writeString(reqBaos, 1, translationId)
+        writeString(reqBaos, 2, videoUrl)
+        writeVarint(reqBaos, (6 shl 3) or 2)
+        writeVarint(reqBaos, audioInfoBytes.size)
+        reqBaos.write(audioInfoBytes)
+
+        val body = reqBaos.toByteArray()
+        val secHeaders = buildSecHeaders(session, body, path)
+
+        val urlObj = URL("$API_HOST$path")
+        val conn = urlObj.openConnection() as HttpURLConnection
+        try {
+            conn.requestMethod = "POST"
+            conn.doOutput = true
+            conn.connectTimeout = 15000
+            conn.readTimeout = 15000
+            conn.setRequestProperty("Content-Type", "application/x-protobuf")
+            conn.setRequestProperty("Accept", "application/x-protobuf")
+            conn.setRequestProperty("User-Agent", USER_AGENT)
+            secHeaders.forEach { (k, v) -> conn.setRequestProperty(k, v) }
+
+            conn.outputStream.use { it.write(body) }
+            val code = conn.responseCode
+            Log.d(TAG, "audio-empty: HTTP $code")
+        } catch (e: Exception) {
+            Log.e(TAG, "audio-empty error", e)
+        } finally {
+            conn.disconnect()
+        }
+    }
+
+    // =========================================================================
+    // Translation request
+    // =========================================================================
+
+    private fun makeTranslationRequest(
+        videoUrl: String,
+        duration: Double,
+        videoTitle: String,
+        fromLang: String,
+        toLang: String,
+        firstRequest: Boolean
+    ): TranslationResult {
+        // Step 1: Get or create session
+        val session = try {
+            getOrCreateSession()
+        } catch (e: Exception) {
+            Log.e(TAG, "Session creation failed", e)
+            return TranslationResult.Error("Session error: ${e.message}")
+        }
+
+        // Step 2: Build protobuf request
+        val requestBody = buildProtobufRequest(
+            videoUrl,
+            duration,
+            videoTitle,
+            fromLang,
+            toLang,
+            firstRequest
+        )
+
+        // Step 3: Build sec headers
+        val secHeaders = buildSecHeaders(session, requestBody, TRANSLATE_PATH)
+
+        // Step 4: Send request
+        val url = URL("$API_HOST$TRANSLATE_PATH")
+        val conn = url.openConnection() as HttpURLConnection
+
+        try {
+            conn.apply {
+                requestMethod = "POST"
+                doOutput = true
+                connectTimeout = 15000
+                readTimeout = 15000
+                setRequestProperty("Content-Type", "application/x-protobuf")
+                setRequestProperty("Accept", "application/x-protobuf")
+                setRequestProperty("User-Agent", USER_AGENT)
+                setRequestProperty("Accept-Language", "en")
+                setRequestProperty("Pragma", "no-cache")
+                setRequestProperty("Cache-Control", "no-cache")
+
+                // Security headers from session
+                secHeaders.forEach { (key, value) ->
+                    setRequestProperty(key, value)
+                }
+            }
+
+            conn.outputStream.use { it.write(requestBody) }
+
+            val responseCode = conn.responseCode
+            Log.d(TAG, "Translation response: HTTP $responseCode")
+
+            if (responseCode != 200) {
+                val errBody = try {
+                    conn.errorStream?.use { String(it.readBytes()) } ?: "no body"
+                } catch (_: Exception) {
+                    "unreadable"
+                }
+                Log.e(TAG, "HTTP $responseCode, error: $errBody")
+
+                // Invalidate session on 401/403
+                if (responseCode in listOf(401, 403)) {
+                    currentSession = null
+                }
+
                 return TranslationResult.Error("HTTP error: $responseCode")
             }
 
             val responseBytes = conn.inputStream.use { it.readBytes() }
-            val hexString = responseBytes.joinToString("") { "%02X".format(it) }
-            Log.d(TAG, "Response size: ${responseBytes.size} bytes. Hex: $hexString")
             return parseProtobufResponse(responseBytes)
         } finally {
             conn.disconnect()
         }
     }
 
-    // =================================================================
-    // Protobuf encoding (matching Orfeev's implementation)
-    // =================================================================
-
+    /**
+     * Builds protobuf matching vot.js VideoTranslationRequest schema.
+     * Field 18 (useLivelyVoice) set to 0 since we don't have OAuth token.
+     */
     private fun buildProtobufRequest(
-        videoUrl: String,
+        url: String,
         duration: Double,
+        title: String,
         fromLang: String,
-        toLang: String
+        toLang: String,
+        firstRequest: Boolean
     ): ByteArray {
         val baos = ByteArrayOutputStream()
 
-        // Field 3: url
-        writeString(baos, 3, videoUrl)
-        // Field 5: firstRequest
-        writeVarintField(baos, 5, 1) // true
-        // Field 6: duration
+        // 3: url (string)
+        writeString(baos, 3, url)
+        // 5: firstRequest (bool as varint), default false so we omit if false
+        if (firstRequest) {
+            writeVarintField(baos, 5, 1)
+        }
+        // 6: duration (double / fixed64)
         writeDouble(baos, 6, duration)
-        // Field 7: unknown0
+        // 7: unknown0 = 1
         writeVarintField(baos, 7, 1)
-        // Field 8: language (source)
+        // 8: language (string) — source language
         writeString(baos, 8, fromLang)
-        // Field 10: unknown1
-        writeVarintField(baos, 10, 0)
-        // Field 14: responseLanguage (target)
+        // 14: responseLanguage (string) — target language
         writeString(baos, 14, toLang)
-        // Field 15: unknown2
+        // 15: unknown2 = 1
         writeVarintField(baos, 15, 1)
-        // Field 16: unknown3
+        // 16: unknown3 = 2
         writeVarintField(baos, 16, 2)
+        // 19: videoTitle (string)
+        writeString(baos, 19, title)
 
         return baos.toByteArray()
     }
 
-    // =================================================================
-    // Protobuf decoding
-    // =================================================================
-
     private fun parseProtobufResponse(data: ByteArray): TranslationResult {
         var translationUrl: String? = null
+        var translationId: String? = null
         var translationDuration = 0.0
         var status = -1
         var remainingTime = 0
         var errorMessage: String? = null
 
         var offset = 0
-        while (offset < data.size) {
-            val (tag, newOff1) = readVarint(data, offset)
-            offset = newOff1
+        try {
+            while (offset < data.size) {
+                val (tag, newOff1) = readVarint(data, offset)
+                offset = newOff1
+                val fieldNumber = (tag shr 3).toInt()
+                val wireType = (tag and 0x07).toInt()
 
-            val fieldNumber = (tag shr 3).toInt()
-            val wireType = (tag and 0x07).toInt()
-
-            when (wireType) {
-                0 -> { // Varint
-                    val (value, newOff2) = readVarint(data, offset)
-                    offset = newOff2
-                    when (fieldNumber) {
-                        4 -> status = value.toInt()
-                        5 -> remainingTime = value.toInt()
-                    }
-                }
-
-                1 -> { // 64-bit (double)
-                    if (offset + 8 <= data.size) {
-                        val bb = ByteBuffer.wrap(data, offset, 8).order(ByteOrder.LITTLE_ENDIAN)
-                        val doubleVal = bb.double
-                        offset += 8
+                when (wireType) {
+                    0 -> {
+                        val (value, newOff2) = readVarint(data, offset)
+                        offset = newOff2
                         when (fieldNumber) {
-                            2 -> translationDuration = doubleVal
+                            4 -> status = value.toInt()
+                            5 -> remainingTime = value.toInt()
                         }
                     }
-                }
 
-                2 -> { // Length-delimited (string/bytes)
-                    val (length, newOff3) = readVarint(data, offset)
-                    offset = newOff3
-                    val len = length.toInt()
-                    if (offset + len <= data.size) {
-                        val str = String(data, offset, len, Charsets.UTF_8)
-                        when (fieldNumber) {
-                            1 -> translationUrl = str
-                            9 -> errorMessage = str
+                    1 -> {
+                        if (offset + 8 <= data.size) {
+                            val bb = ByteBuffer.wrap(data, offset, 8)
+                                .order(ByteOrder.LITTLE_ENDIAN)
+                            val d = bb.double
+                            offset += 8
+                            if (fieldNumber == 2) translationDuration = d
                         }
                     }
-                    offset += len
-                }
 
-                5 -> { // 32-bit
-                    offset += 4
-                }
+                    2 -> {
+                        val (len, newOff3) = readVarint(data, offset)
+                        offset = newOff3
+                        val length = len.toInt()
+                        if (offset + length <= data.size) {
+                            val str = String(data, offset, length, Charsets.UTF_8)
+                            when (fieldNumber) {
+                                1 -> translationUrl = str
+                                7 -> translationId = str
+                                9 -> errorMessage = str
+                            }
+                        }
+                        offset += length
+                    }
 
-                else -> {
-                    break
+                    5 -> offset += 4
+
+                    else -> { /* skip unknown wire types */ }
                 }
             }
+        } catch (e: Exception) {
+            Log.e(TAG, "Error parsing response Protobuf", e)
         }
 
         Log.d(
             TAG,
-            "Parsed response: status=$status, " +
-                "url=${translationUrl?.take(50)}, " +
-                "duration=$translationDuration, " +
-                "remaining=$remainingTime, " +
-                "error=$errorMessage"
+            "Response: status=$status, url=${translationUrl?.take(80)}, " +
+                "remaining=$remainingTime, error=$errorMessage"
         )
 
+        // Status codes from vot.js VideoTranslationStatus:
+        // 0 = FAILED, 1 = FINISHED, 2 = WAITING,
+        // 3 = LONG_WAITING, 5 = PART_CONTENT, 6 = AUDIO_REQUESTED
         return when (status) {
-            0 -> TranslationResult.Error(errorMessage ?: "Translation failed (status 0)")
-
-            1, 2 -> {
-                if (translationUrl != null) {
-                    TranslationResult.Success(translationUrl, translationDuration)
+            1, 5 -> {
+                val currentUrl = translationUrl
+                if (!currentUrl.isNullOrEmpty()) {
+                    TranslationResult.Success(currentUrl, translationDuration)
                 } else {
-                    TranslationResult.InProgress(remainingTime) // May get status 1/2 but URL not ready
+                    TranslationResult.InProgress(remainingTime, status, translationId)
                 }
             }
 
-            3, 6 -> TranslationResult.InProgress(remainingTime)
+            2, 3, 6 -> TranslationResult.InProgress(remainingTime, status, translationId)
+
+            0 -> TranslationResult.Error(
+                errorMessage ?: "Translation failed (Status 0)"
+            )
 
             else -> TranslationResult.Error("Unknown status: $status")
         }
     }
 
-    // =================================================================
-    // Protobuf writing/reading helpers
-    // =================================================================
+    // =========================================================================
+    // Protobuf helpers
+    // =========================================================================
 
-    private fun writeString(out: ByteArrayOutputStream, fieldNumber: Int, value: String) {
+    private fun writeString(
+        out: ByteArrayOutputStream,
+        fieldNumber: Int,
+        value: String
+    ) {
         val bytes = value.toByteArray(Charsets.UTF_8)
-        val tag = (fieldNumber shl 3) or 2
-        writeVarint(out, tag)
+        writeVarint(out, (fieldNumber shl 3) or 2)
         writeVarint(out, bytes.size)
         out.write(bytes)
     }
 
-    private fun writeVarintField(out: ByteArrayOutputStream, fieldNumber: Int, value: Int) {
-        val tag = (fieldNumber shl 3) or 0
-        writeVarint(out, tag)
+    private fun writeVarintField(
+        out: ByteArrayOutputStream,
+        fieldNumber: Int,
+        value: Int
+    ) {
+        writeVarint(out, (fieldNumber shl 3) or 0)
         writeVarint(out, value)
     }
 
-    private fun writeDouble(out: ByteArrayOutputStream, fieldNumber: Int, value: Double) {
-        val tag = (fieldNumber shl 3) or 1
-        writeVarint(out, tag)
+    private fun writeDouble(
+        out: ByteArrayOutputStream,
+        fieldNumber: Int,
+        value: Double
+    ) {
+        writeVarint(out, (fieldNumber shl 3) or 1)
         val bb = ByteBuffer.allocate(8).order(ByteOrder.LITTLE_ENDIAN)
         bb.putDouble(value)
         out.write(bb.array())
@@ -334,7 +635,7 @@ class YandexTranslationService {
 
     private fun writeVarint(out: ByteArrayOutputStream, value: Int) {
         var v = value
-        while (v > 0x7F) {
+        while (v and -0x80 != 0) {
             out.write((v and 0x7F) or 0x80)
             v = v ushr 7
         }
@@ -355,39 +656,46 @@ class YandexTranslationService {
         return Pair(result, offset)
     }
 
-    // =================================================================
-    // HMAC signing
-    // =================================================================
+    // =========================================================================
+    // Crypto helpers
+    // =========================================================================
 
-    private fun signBody(body: ByteArray): String {
+    private fun hmacSign(data: ByteArray): String {
         val mac = Mac.getInstance("HmacSHA256")
-        val keySpec = SecretKeySpec(HMAC_KEY.toByteArray(Charsets.UTF_8), "HmacSHA256")
+        val keySpec = SecretKeySpec(
+            HMAC_KEY.toByteArray(Charsets.UTF_8),
+            "HmacSHA256"
+        )
         mac.init(keySpec)
-        val hash = mac.doFinal(body)
+        val hash = mac.doFinal(data)
         return hash.joinToString("") { "%02x".format(it) }
     }
 
-    // =================================================================
-    // URL shortener
-    // =================================================================
+    /** Generate UUID matching vot.js getUUID() — 32 hex chars, uppercase */
+    private fun generateUUID(): String {
+        val hexDigits = "0123456789ABCDEF"
+        val sb = StringBuilder(32)
+        val random = java.security.SecureRandom()
+        for (i in 0 until 32) {
+            sb.append(hexDigits[random.nextInt(16)])
+        }
+        return sb.toString()
+    }
 
     private fun shortenYouTubeUrl(url: String): String {
         return try {
-            val parsed = URL(url)
-            if (parsed.host.contains("youtube.com")) {
-                val videoId = parsed.query
-                    ?.split("&")
-                    ?.firstOrNull { it.startsWith("v=") }
-                    ?.substringAfter("v=")
-                if (videoId != null) {
-                    "https://youtu.be/$videoId"
-                } else {
-                    url
-                }
+            val videoId = if (url.contains("youtu.be/")) {
+                url.substringAfter("youtu.be/")
+                    .substringBefore("?")
+                    .substringBefore("&")
+            } else if (url.contains("v=")) {
+                url.substringAfter("v=").substringBefore("&")
             } else {
-                url
+                null
             }
-        } catch (e: Exception) {
+
+            if (videoId != null) "https://youtu.be/$videoId" else url
+        } catch (_: Exception) {
             url
         }
     }
