@@ -1,0 +1,525 @@
+--------- beginning of main
+04-06 19:00:51.830  1529  1529 D CarrierSvcBindHelper: onPackageUpdateFinished: org.polymorphicshade.tubular.debug
+04-06 19:00:51.832   806   820 I system_server: Background concurrent mark compact GC freed 12MB AllocSpace bytes, 19(368KB) LOS objects, 37% free, 39MB/63MB, paused 13.995ms,18.350ms total 652.588ms
+04-06 19:00:51.848  1529  1529 D CarrierSvcBindHelper: No carrier app for: 0
+04-06 19:00:51.848  1529  1529 D CarrierSvcBindHelper: onPackageModified: org.polymorphicshade.tubular.debug
+04-06 19:00:51.848  1529  1529 D CarrierSvcBindHelper: No carrier app for: 0
+04-06 19:00:51.862  2113  2373 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+04-06 19:00:51.862  2113  2373 I AiAiEcho: EchoTargets: 
+04-06 19:00:51.862  2113  2373 I AiAiEcho: Filtered by AiAi flag check: 
+04-06 19:00:51.862  2113  2373 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+04-06 19:00:51.862  2113  2373 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+04-06 19:00:51.864  1630  1671 I PluginActionManager[com.android.systemui.action.ICON_WRAPPER_PLUGIN]: Found 0 plugins
+04-06 19:00:51.877  2083  2083 I MediaProvider: Invalidating LocalCallingIdentity cache for package org.polymorphicshade.tubular.debug. Reason: package android.intent.action.PACKAGE_REMOVED
+04-06 19:00:51.877  1630  1671 I PluginActionManager[com.android.systemui.action.PLUGIN_CUSTOM_WIDGET]: Found 0 plugins
+04-06 19:00:51.878  1529  1529 E SmsApplication: com.google.android.apps.messaging lost android:read_cell_broadcasts:  (fixing)
+04-06 19:00:51.879  2113  2373 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+04-06 19:00:51.883  2083  2083 W MediaProvider: WorkProfileOwnerApps cache is empty
+04-06 19:00:51.887  5621  5621 I Finsky:background: [2] Memory trim requested to level 40
+04-06 19:00:51.889   649   649 E BpTransactionCompletedListener: Failed to transact (-32)
+04-06 19:00:51.889   649   649 E BpTransactionCompletedListener: Failed to transact (-32)
+04-06 19:00:51.891  2083  2083 D PickerSyncLockManager: Trying to acquire lock com.android.providers.media.photopicker.sync.CloseableReentrantLock@3a3fe9c[Unlocked]. Lock Name = CLOUD_PROVIDER_LOCK. Threads that may be waiting to acquire this lock = []
+04-06 19:00:51.892  1630  1671 I PluginActionManager[com.android.systemui.action.PLUGIN_NETWORK_FETCHER_ACTIONS]: Found 0 plugins
+04-06 19:00:51.895  2083  2083 D CloseableReentrantLock: Successfully acquired lock com.android.providers.media.photopicker.sync.CloseableReentrantLock@3a3fe9c[Locked by thread main]. Lock Name = CLOUD_PROVIDER_LOCK. Threads that may be waiting to acquire this lock = []
+04-06 19:00:51.899  2083  2083 D CloseableReentrantLock: Successfully released lock com.android.providers.media.photopicker.sync.CloseableReentrantLock@3a3fe9c[Unlocked]. Lock Name = CLOUD_PROVIDER_LOCK. Threads that may be waiting to acquire this lock = []
+04-06 19:00:51.903  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
+04-06 19:00:51.904  1630  1671 I PluginActionManager[com.android.launcher3.action.PLUGIN_DYNAMIC_RESOURCE]: Found 0 plugins
+04-06 19:00:51.904  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_AdsDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:00:51.904  1630  1671 I PluginActionManager[com.android.systemui.action.PLUGIN_ALL_APPS_ACTIONS]: Found 0 plugins
+04-06 19:00:51.905  1630  1630 D b/417220811: invalidateLoadedTasks - previous requestLoadId: -1
+04-06 19:00:51.905  1630  1671 I PluginActionManager[com.android.systemui.action.PLUGIN_LAUNCHER_OVERLAY]: Found 0 plugins
+04-06 19:00:51.905   806   944 I RoleService: Granting default roles...
+04-06 19:00:51.906  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_CronetDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:00:51.907  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteLoader_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:00:51.909  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteModulesA_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:00:51.909   806   806 D AppSearchAppsIndexerManagerS: userid in package receiver: 10230
+04-06 19:00:51.911  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteModulesC_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:00:51.912  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_GoogleCertificates_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:00:51.913  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_MapsDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:00:51.914  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_MeasurementDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:00:51.916   806   822 W System  : A resource failed to call close. 
+04-06 19:00:51.916  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_all_locale_splits.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:00:51.916  1630  1671 I PluginActionManager[com.android.systemui.action.PLUGIN_BC_SMARTSPACE_DATA]: Found 0 plugins
+04-06 19:00:51.917  6761  6761 I Finsky  : [2] Memory trim requested to level 40
+04-06 19:00:51.917  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000d/dl-PlayCloudSearch.optional_253434100000.apk has no usable artifacts
+04-06 19:00:51.917  6761  6761 I Finsky  : [2] Flushing in-memory image cache
+04-06 19:00:51.918  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000b/dl-MlkitBarcodeUi.optional_253434100800.apk has no usable artifacts
+04-06 19:00:51.919  5621  5621 I Finsky:background: [2] Memory trim requested to level 40
+04-06 19:00:51.920  1630  1671 I PluginActionManager[com.android.systemui.action.ICON_WRAPPER_PLUGIN]: Found 0 plugins
+04-06 19:00:51.920  1630  1671 I PluginActionManager[com.android.systemui.action.PLUGIN_CUSTOM_WIDGET]: Found 0 plugins
+04-06 19:00:51.922  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000a/dl-TfliteDynamiteDynamite.integ_252130102100800.apk has no usable artifacts
+04-06 19:00:51.922  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.apk has no usable artifacts
+04-06 19:00:51.923  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000016/dl-PlayCloudSearch.optional_260438100000.apk has no usable artifacts
+04-06 19:00:51.924  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000002/DynamiteLoader.apk has no usable artifacts
+04-06 19:00:51.924  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000005/GoogleCertificates.apk has no usable artifacts
+04-06 19:00:51.925   806   834 I ImeTracker: system_server:73898f86: onCancelled at PHASE_SERVER_SHOULD_HIDE
+04-06 19:00:51.925  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000c/dl-Appsearch.optional_253434100800.apk has no usable artifacts
+04-06 19:00:51.926  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000015/dl-MlkitOcrCommon.optional_260438100800.apk has no usable artifacts
+04-06 19:00:51.927  1630  1671 I PluginActionManager[com.android.systemui.action.PLUGIN_NETWORK_FETCHER_ACTIONS]: Found 0 plugins
+04-06 19:00:51.927  5621  5621 I Finsky:background: [2] ahpk - Received: android.intent.action.PACKAGE_REMOVED, [t0mZgxPkzzgBdIZTyXN4es1uNusjzCygMyGULvkPhyk]
+04-06 19:00:51.928  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000013/dl-MlkitBarcodeUi.optional_260438100800.apk has no usable artifacts
+04-06 19:00:51.928  1630  1671 I PluginActionManager[com.android.launcher3.action.PLUGIN_DYNAMIC_RESOURCE]: Found 0 plugins
+04-06 19:00:51.929  1630  1630 D RecentsView: onTaskRemoved: 28, not handling task stack changes
+04-06 19:00:51.929  1630  1630 D RecentsView: onTaskRemoved: 28, not handling task stack changes
+04-06 19:00:51.930  9409  9411 I artd    : GetBestInfo: vdex next to the dex file (/data/user/0/com.google.android.gms/app_dg_cache/BB2AE5A47BB198AF36C19CFD2B6407061A1BAF30/oat/x86_64/the.vdex) is kOatUpToDate with filter 'verify' executable 'false'
+04-06 19:00:51.931  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000011/dl-Appsearch.optional_260438100800.apk has no usable artifacts
+04-06 19:00:51.932  1630  1671 I PluginActionManager[com.android.systemui.action.PLUGIN_ALL_APPS_ACTIONS]: Found 0 plugins
+04-06 19:00:51.933 13233 13233 I SafetyLabelChangedBroadcastReceiver: received broadcast packageName: org.polymorphicshade.tubular.debug, current user: UserHandle{0}, packageChangeEvent: UPDATE, intent user: UserHandle{0}
+04-06 19:00:51.933  1630  1671 I PluginActionManager[com.android.systemui.action.PLUGIN_LAUNCHER_OVERLAY]: Found 0 plugins
+04-06 19:00:51.936  1630  1671 I PluginActionManager[com.android.systemui.action.PLUGIN_BC_SMARTSPACE_DATA]: Found 0 plugins
+04-06 19:00:51.936  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000010/dl-VisionOcr.optional_260438100000.apk has no usable artifacts
+04-06 19:00:51.938  9409  9411 I artd    : GetBestInfo: /data/user/0/com.google.android.gms/app_dg_cache/94DF452EEF4B8E717545DCDEA6CC3C50A319A195/the.apk has no usable artifacts
+04-06 19:00:51.939  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:51.940  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:51.941  1630  1671 D QuickstepModelDelegate: notifyAppTargetEvent action=1 launchLocation=
+04-06 19:00:51.942  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:51.947  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000007/MeasurementDynamite.apk has no usable artifacts
+04-06 19:00:51.954  1529  1529 E SmsApplication: com.google.android.apps.messaging lost android:read_cell_broadcasts:  (fixing)
+04-06 19:00:51.954 12792 12798 W t_app_installer: userfaultfd: MOVE ioctl seems unsupported: Connection timed out
+04-06 19:00:51.955  1630  1630 D SsBaseTemplateCard: Passed-in item info is null
+04-06 19:00:51.955  1630  1630 D SsBaseTemplateCard: Passed-in item info is null
+04-06 19:00:51.955  1630  1630 D SsBaseTemplateCard: Passed-in item info is null
+04-06 19:00:51.955  1630  1630 D SsBaseTemplateCard: Passed-in item info is null
+04-06 19:00:51.956  1630  1630 I SsBaseTemplateCard: Secondary card pane is null
+04-06 19:00:51.964 12792 12798 W t_app_installer: Reducing the number of considered missed Gc histogram windows from 147 to 100
+04-06 19:00:51.974 13233 13240 W ssioncontroller: Suspending all threads took: 6.345ms
+04-06 19:00:51.983  6761  6761 I Finsky  : [2] Memory trim requested to level 40
+04-06 19:00:51.983  6761  6761 I Finsky  : [2] Flushing in-memory image cache
+04-06 19:00:52.001  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.001   806  1315 W ImageReader_JNI: Unable to acquire a buffer item, very likely client tried to acquire more than maxImages buffers
+04-06 19:00:52.007  6761  6761 I Finsky  : [2] ahpu - Received: android.intent.action.PACKAGE_REMOVED, [t0mZgxPkzzgBdIZTyXN4es1uNusjzCygMyGULvkPhyk]
+--------- beginning of system
+04-06 19:00:52.009   806  2386 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_SMS, mode = allow, callingUid = 1001, oldMode = allow
+04-06 19:00:52.010  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.011   806  2385 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_SMS, mode = allow, callingUid = 1001, oldMode = allow
+04-06 19:00:52.012   806  2361 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_WAP_PUSH, mode = allow, callingUid = 1001, oldMode = allow
+04-06 19:00:52.020  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.020  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.021   806  1724 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = SEND_SMS, mode = allow, callingUid = 1001, oldMode = allow
+04-06 19:00:52.021  5621  5688 I Finsky:background: [47] Current account updated in PVS
+04-06 19:00:52.022   806   806 D AS.AudioService: received android.intent.action.PACKAGE_REPLACED replacing: true archival: false for package org.polymorphicshade.tubular.debug with uid 10230
+04-06 19:00:52.022   806   806 D AppSearchAppsIndexerManagerS: userid in package receiver: 10230
+04-06 19:00:52.022  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.022   806   806 D ActivityThread: Package [org.polymorphicshade.tubular.debug] reported as REPLACED, but missing application info. Assuming REMOVED.
+04-06 19:00:52.024  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.024  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.025  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.026   806  1311 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+04-06 19:00:52.030   806  7544 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv1_CM_emulation.so
+04-06 19:00:52.033 13233 13240 I ssioncontroller: Background concurrent mark compact GC freed 968KB AllocSpace bytes, 0(0B) LOS objects, 49% free, 4427KB/8854KB, paused 22.421ms,2.012ms total 180.363ms
+04-06 19:00:52.036   806  1470 W SignedPackage: Package doesn't have required signing certificate: com.google.android.retaildemo
+04-06 19:00:52.037   806  1470 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms.supervision, role: android.app.role.SYSTEM_SUPERVISION, user: 0
+04-06 19:00:52.038  1529  1825 D ImsResolver: maybeAddedImsService, packageName: org.polymorphicshade.tubular.debug
+04-06 19:00:52.038  1529  1825 V ImsResolver: searchForImsServices: package=org.polymorphicshade.tubular.debug, users=[UserHandle{0}]
+04-06 19:00:52.041   806  1470 W SignedPackage: Package doesn't have required signing certificate: com.google.android.apps.work.clouddpc
+04-06 19:00:52.047   806   806 W AlarmManager: Package org.polymorphicshade.tubular.debug, uid 10230 lost permission to set exact alarms!
+04-06 19:00:52.047  1529  1825 V ImsResolver: searchForImsServices: package=org.polymorphicshade.tubular.debug, users=[UserHandle{0}]
+04-06 19:00:52.050 13233 14832 I PermissionControllerServiceImpl: Updating user sensitive for uid 10230
+04-06 19:00:52.056   806   806 W Looper  : Drained
+04-06 19:00:52.063  5621  5688 I Finsky:background: [47] Current account updated in PVS
+04-06 19:00:52.064  5621  5713 I Finsky:background: [50] Current account updated in PVS
+04-06 19:00:52.065  5621  5713 I Finsky:background: [50] Current account updated in PVS
+04-06 19:00:52.075  5621  5723 I Finsky:background: [51] Current account updated in PVS
+04-06 19:00:52.076  5621  5723 I Finsky:background: [51] Current account updated in PVS
+04-06 19:00:52.076  5621  5723 I Finsky:background: [51] Current account updated in PVS
+04-06 19:00:52.081  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.081  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.084  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.084  1529  1529 W VvmPkgInstalledRcvr: carrierVvmPkgAdded: carrier vvm packages doesn't contain org.polymorphicshade.tubular.debug
+04-06 19:00:52.088   806  7544 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv2_emulation.so
+04-06 19:00:52.088   806  2386 W JobScheduler: Job didn't exist in JobStore: 2b131e #u0a153/165064389 com.android.vending/com.google.android.finsky.instantapps.metrics.LogFlushJob
+04-06 19:00:52.095  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.096  6646  6646 D ActivityThread: Package [org.polymorphicshade.tubular.debug] reported as REPLACED, but missing application info. Assuming REMOVED.
+04-06 19:00:52.097  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.098  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.099  6646  6646 D ActivityThread: Package [org.polymorphicshade.tubular.debug] reported as REPLACED, but missing application info. Assuming REMOVED.
+04-06 19:00:52.102  6761  6812 I Finsky  : [59] AIM: AppInfoManager-Perf > OnDeviceAppInfo > cacheHitCount=0, cacheMissCount=1. Missed  in cache (limit 10) : [org.polymorphicshade.tubular.debug]
+04-06 19:00:52.105  5621  5621 I Finsky:background: [2] IQ: onPackageRemoved org.polymorphicshade.tubular.debug, replacing=true, uninstallingFromPlay=false
+04-06 19:00:52.107  7172  7176 W .apps.wellbeing: Suspending all threads took: 26.973ms
+04-06 19:00:52.111  6761  6812 I Finsky  : [59] AIM: Got app ownership map. App counts: . Unique apps: 0
+04-06 19:00:52.114  6761  6812 E Finsky  : [59] [Counters] attempted to use a non-positive increment for: 4752
+04-06 19:00:52.117  5621  5723 I Finsky:background: [51] Current account updated in PVS
+04-06 19:00:52.117  5621  5723 I Finsky:background: [51] Current account updated in PVS
+04-06 19:00:52.118  5621  5723 I Finsky:background: [51] Current account updated in PVS
+04-06 19:00:52.118  5621  5723 I Finsky:background: [51] Current account updated in PVS
+04-06 19:00:52.119  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.119  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.120  6761  6812 E Finsky  : [59] [Counters] attempted to use a non-positive increment for: 4753
+04-06 19:00:52.122  5621  5621 I Finsky:background: [2] ahpk - Received: android.intent.action.PACKAGE_ADDED, [t0mZgxPkzzgBdIZTyXN4es1uNusjzCygMyGULvkPhyk]
+04-06 19:00:52.128   806  1311 D ActivityManager: sync unfroze 6646 com.google.android.gms for 6
+04-06 19:00:52.130  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.132  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.140  5621  5688 I Finsky:background: [47] Current account updated in PVS
+04-06 19:00:52.141  5621  5688 I Finsky:background: [47] Current account updated in PVS
+04-06 19:00:52.141  5621  5688 I Finsky:background: [47] Current account updated in PVS
+04-06 19:00:52.144  1529  1529 D SatelliteController: packageStateChanged: package:org.polymorphicshade.tubular.debug defaultSmsPackageName: com.google.android.apps.messaging satelliteGatewayServicePackageName: 
+04-06 19:00:52.144  1529  1529 D ActivityThread: Package [org.polymorphicshade.tubular.debug] reported as REPLACED, but missing application info. Assuming REMOVED.
+04-06 19:00:52.149  5621 15539 I Finsky:background: [174] IQ: handled package removed
+04-06 19:00:52.153  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.154  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.154  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.163   806  1470 I Role    : com.google.android.gms not qualified for android.app.role.SYSTEM_DEPENDENCY_INSTALLER due to missing RequiredComponent{mIntentFilterData=IntentFilterData{mAction='android.content.pm.action.INSTALL_DEPENDENCY', mCategories='[]', mDataScheme='null', mDataType='null'}, mMinTargetSdkVersion=1, mFlags='0', mPermission='android.permission.BIND_DEPENDENCY_INSTALLER', mQueryFlags=0, mMetaData=[]}
+04-06 19:00:52.163   806  1470 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms, role: android.app.role.SYSTEM_DEPENDENCY_INSTALLER, user: 0
+04-06 19:00:52.164  5621  5688 I Finsky:background: [47] Current account updated in PVS
+04-06 19:00:52.164  6761  6812 I Finsky  : [59] AIM: AppInfoManager-Perf > ItemModel > CacheSize=0, cacheHitCount=0, cacheMissCount=1, total appsWithNoServerDataCount=0. Missed  in cache (limit 10) : [org.polymorphicshade.tubular.debug]
+04-06 19:00:52.164  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.165  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.165   806  7544 W HWUI    : Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+04-06 19:00:52.166   806  7544 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+04-06 19:00:52.167  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.167  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.171  5621  5723 I Finsky:background: [51] Current account updated in PVS
+04-06 19:00:52.176   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_shortcut_target_service, current:{}, new:{}
+04-06 19:00:52.176   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_qs_targets, current:{}, new:{}
+04-06 19:00:52.176   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:{}
+04-06 19:00:52.176   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_gesture_targets, current:{}, new:{}
+04-06 19:00:52.176   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_key_gesture_targets, current:{}, new:{}
+04-06 19:00:52.178  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.181   806   966 V AccessibilityManagerService: onUserStateChangedLocked for userId: 0, forceUpdate: false
+04-06 19:00:52.184  5621  5688 I Finsky:background: [47] Current account updated in PVS
+04-06 19:00:52.184  5621  5713 I Finsky:background: [50] Current account updated in PVS
+04-06 19:00:52.185  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.188   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_shortcut_target_service, current:{}, new:{}
+04-06 19:00:52.188   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:{}
+04-06 19:00:52.188   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_gesture_targets, current:{}, new:{}
+04-06 19:00:52.188   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_qs_targets, current:{}, new:{}
+04-06 19:00:52.189   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_key_gesture_targets, current:{}, new:{}
+04-06 19:00:52.191   806   966 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+04-06 19:00:52.191   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:{}
+04-06 19:00:52.191   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_qs_targets, current:{}, new:{}
+04-06 19:00:52.198  5621  5688 I Finsky:background: [47] Current account updated in PVS
+04-06 19:00:52.199   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_shortcut_target_service, current:{}, new:{}
+04-06 19:00:52.199   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_qs_targets, current:{}, new:{}
+04-06 19:00:52.199   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:{}
+04-06 19:00:52.199   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_gesture_targets, current:{}, new:{}
+04-06 19:00:52.199   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_key_gesture_targets, current:{}, new:{}
+04-06 19:00:52.201   806   966 V AccessibilityManagerService: onUserStateChangedLocked for userId: 0, forceUpdate: false
+04-06 19:00:52.201  5621  5621 I Finsky:background: [2] ahpk - Received: android.intent.action.PACKAGE_ADDED, [t0mZgxPkzzgBdIZTyXN4es1uNusjzCygMyGULvkPhyk]
+04-06 19:00:52.201  5621  5723 I Finsky:background: [51] Current account updated in PVS
+04-06 19:00:52.202   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_shortcut_target_service, current:{}, new:{}
+04-06 19:00:52.203   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:{}
+04-06 19:00:52.203   806   806 W libbinder.IPCThreadState: Sending oneway calls to frozen process.
+04-06 19:00:52.206   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_gesture_targets, current:{}, new:{}
+04-06 19:00:52.207   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_qs_targets, current:{}, new:{}
+04-06 19:00:52.207   806   966 V AccessibilityUserState: updateShortcutTargets: type:accessibility_key_gesture_targets, current:{}, new:{}
+04-06 19:00:52.208   806   966 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+04-06 19:00:52.208  6646  6646 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS xflg=0x4 pkg=com.google.android.gms }
+04-06 19:00:52.210   806   806 W libbinder.IPCThreadState: Sending oneway calls to frozen process.
+04-06 19:00:52.212   806   806 W libbinder.IPCThreadState: Sending oneway calls to frozen process.
+04-06 19:00:52.214   806   806 W libbinder.IPCThreadState: Sending oneway calls to frozen process.
+04-06 19:00:52.218  6761  6761 I Finsky  : [2] ahpu - Received: android.intent.action.PACKAGE_ADDED, [t0mZgxPkzzgBdIZTyXN4es1uNusjzCygMyGULvkPhyk]
+04-06 19:00:52.220   806   806 W libbinder.IPCThreadState: Sending oneway calls to frozen process.
+04-06 19:00:52.222   806   806 W libbinder.IPCThreadState: Sending oneway calls to frozen process.
+04-06 19:00:52.222   806   806 W libbinder.IPCThreadState: Sending oneway calls to frozen process.
+04-06 19:00:52.222  6761 15545 I Finsky  : [254] [ContentSync] finished, scheduled=false
+04-06 19:00:52.224  5621  5723 I Finsky:background: [51] Current account updated in PVS
+04-06 19:00:52.225  5621  5723 I Finsky:background: [51] Current account updated in PVS
+04-06 19:00:52.225   806   806 W libbinder.IPCThreadState: Sending oneway calls to frozen process.
+04-06 19:00:52.227  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.228   806   806 W libbinder.IPCThreadState: Sending oneway calls to frozen process.
+04-06 19:00:52.228   806   806 W libbinder.IPCThreadState: Sending oneway calls to frozen process.
+04-06 19:00:52.228   806   806 W libbinder.IPCThreadState: Sending oneway calls to frozen process.
+04-06 19:00:52.228  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.229   806   806 W libbinder.IPCThreadState: Sending oneway calls to frozen process.
+04-06 19:00:52.229   806   806 W libbinder.IPCThreadState: Sending oneway calls to frozen process.
+04-06 19:00:52.229   806   806 W libbinder.IPCThreadState: Sending oneway calls to frozen process.
+04-06 19:00:52.229  6761  6812 I Finsky  : [59] AIM: AppInfoManager-Perf > ItemModel > ItemStore Called 1 apps cacheOptions = USE_CACHE
+04-06 19:00:52.231  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.234  5621  5713 I Finsky:background: [50] Current account updated in PVS
+04-06 19:00:52.234  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.236  5621  5713 I Finsky:background: [50] Current account updated in PVS
+04-06 19:00:52.236  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.238  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.238  6761  6824 I Finsky  : [68] AIM: AppInfoManager-Perf > OnDeviceAppInfo > cacheHitCount=0, cacheMissCount=1. Missed  in cache (limit 10) : [org.polymorphicshade.tubular.debug]
+04-06 19:00:52.238  6761  6824 I Finsky  : [68] AIM: Got app ownership map. App counts: . Unique apps: 0
+04-06 19:00:52.238  6761  6824 E Finsky  : [68] [Counters] attempted to use a non-positive increment for: 4752
+04-06 19:00:52.239  6761  6824 E Finsky  : [68] [Counters] attempted to use a non-positive increment for: 4753
+04-06 19:00:52.242  6761  6830 I Finsky  : [73] ItemStore: Not cached: org.polymorphicshade.tubular.debug
+04-06 19:00:52.245  6761  6812 I Finsky  : [59] AIM: ItemModel fetch - unauth(1), auth()
+04-06 19:00:52.245  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.246  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.246  6761  6812 I Finsky  : [59] AIM: AppInfoManager-Perf > ItemModel > CacheSize=0, cacheHitCount=0, cacheMissCount=1, total appsWithNoServerDataCount=0. Missed  in cache (limit 10) : [org.polymorphicshade.tubular.debug]
+04-06 19:00:52.246  6761  6812 I Finsky  : [59] AIM: AppInfoManager-Perf > ItemModel > ItemStore Called 1 apps cacheOptions = USE_CACHE
+04-06 19:00:52.246  6761  6812 I Finsky  : [59] AIM: ItemModel fetch - unauth(1), auth()
+04-06 19:00:52.248  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.249  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.250  5621  5713 I Finsky:background: [50] Current account updated in PVS
+04-06 19:00:52.249  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.251  6761  6816 I Finsky  : [63] ItemStore: Not cached: org.polymorphicshade.tubular.debug
+04-06 19:00:52.252  5621  5621 I Finsky:background: [2] ahpk - Deduping intent android.intent.action.PACKAGE_ADDED
+04-06 19:00:52.252  5621  5723 I Finsky:background: [51] Current account updated in PVS
+04-06 19:00:52.252  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.253  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.253  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.253  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.253  5621  5688 I Finsky:background: [47] Current account updated in PVS
+04-06 19:00:52.253  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.254  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.254  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.255  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.255  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.260  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.262  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.263  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.265  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.265  5621  5713 I Finsky:background: [50] Current account updated in PVS
+04-06 19:00:52.268  5621  5713 I Finsky:background: [50] Current account updated in PVS
+04-06 19:00:52.268  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.268  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.269  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.269  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.270  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.270  5621  5621 I Finsky:background: [2] ahpk - Received: android.intent.action.PACKAGE_ADDED, [t0mZgxPkzzgBdIZTyXN4es1uNusjzCygMyGULvkPhyk]
+04-06 19:00:52.271  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.275  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.277  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.278  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.278  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.278  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.278  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.279  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.283  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.284  5621  5713 I Finsky:background: [50] Current account updated in PVS
+04-06 19:00:52.284  5621  5688 I Finsky:background: [47] Current account updated in PVS
+04-06 19:00:52.292  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.296  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.297  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.298  6761  6761 I Finsky  : [2] DTU: Received onPackageAdded, replacing: true
+04-06 19:00:52.298  5621  5621 I Finsky:background: [2] ahpk - Deduping intent android.intent.action.PACKAGE_ADDED
+04-06 19:00:52.299  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.300  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.304  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.304  5621 15533 I Finsky:background: [172] Wrote row to frosting DB: 370
+04-06 19:00:52.304  5621  5732 I Finsky:background: [54] RECEIVER_PACKAGE_MONITOR_BACKGROUND#logWorkEndAndFinishGoAsync: SUCCESS
+04-06 19:00:52.305  5621  5712 I Finsky:background: [49] Current account updated in PVS
+04-06 19:00:52.305  5621  5713 I Finsky:background: [50] Current account updated in PVS
+04-06 19:00:52.305  5621  5713 I Finsky:background: [50] Current account updated in PVS
+04-06 19:00:52.305  5621  5713 I Finsky:background: [50] Current account updated in PVS
+04-06 19:00:52.306  5621  5713 I Finsky:background: [50] Current account updated in PVS
+04-06 19:00:52.306  5621  5713 I Finsky:background: [50] Current account updated in PVS
+04-06 19:00:52.306  5621  5713 I Finsky:background: [50] Current account updated in PVS
+04-06 19:00:52.307  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.307  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.311  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.312  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.313  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.314  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.314  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.316  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.316  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.316  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.317  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.317  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.318  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.326   806  2361 E AppOps  : attributionTag VCN not declared in manifest of android
+04-06 19:00:52.326  6630 15551 I ProximityAuth: [RecentAppsMediator] Package added: (user=UserHandle{0}) org.polymorphicshade.tubular.debug
+04-06 19:00:52.349   806  1470 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms, role: android.app.role.WALLET, user: 0
+04-06 19:00:52.366  6630 15554 I Fitness : (REDACTED) FitCleanupIntentOperation received Intent %s
+04-06 19:00:52.374  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.380  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.380  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.382  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.382  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.382  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.383  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.383  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.384  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.384  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.404  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.405  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.405  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.405  6761  6761 I Finsky  : [2] ahpu - Received: android.intent.action.PACKAGE_ADDED, [t0mZgxPkzzgBdIZTyXN4es1uNusjzCygMyGULvkPhyk]
+04-06 19:00:52.408  6761 15545 I Finsky  : [254] [ContentSync] finished, scheduled=false
+04-06 19:00:52.412  6646  6646 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS xflg=0x4 pkg=com.google.android.gms }
+04-06 19:00:52.413  6646  6646 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS xflg=0x4 pkg=com.google.android.gms }
+04-06 19:00:52.413  6761  6761 I Finsky  : [2] ahpu - Deduping intent android.intent.action.PACKAGE_ADDED
+04-06 19:00:52.417  6761  6761 I Finsky  : [2] ahpu - Received: android.intent.action.PACKAGE_ADDED, [t0mZgxPkzzgBdIZTyXN4es1uNusjzCygMyGULvkPhyk]
+04-06 19:00:52.426  6761  6761 I Finsky  : [2] ahpu - Deduping intent android.intent.action.PACKAGE_ADDED
+04-06 19:00:52.426  6761  6761 I Finsky  : [2] Memory trim requested to level 40
+04-06 19:00:52.426  6761  6761 I Finsky  : [2] Flushing in-memory image cache
+04-06 19:00:52.426  6761  6761 I Finsky  : [2] Memory trim requested to level 40
+04-06 19:00:52.426  6761  6761 I Finsky  : [2] Flushing in-memory image cache
+04-06 19:00:52.426  6761  6803 I Finsky  : [50] RECEIVER_PACKAGE_MONITOR#logWorkEndAndFinishGoAsync: SUCCESS
+04-06 19:00:52.429  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.429  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.430  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.433  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.433  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.434  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.434  5621 15533 I Finsky:background: [172] Wrote row to frosting DB: 371
+04-06 19:00:52.437  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.438  6646 15555 W SQLiteLog: (28) double-quoted string literal: "org.polymorphicshade.tubular.debug"
+04-06 19:00:52.439  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.439  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.440  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.440  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.440  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.441  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.441  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.441  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.442  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.442  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.442  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.448  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.449  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.450  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.450  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.450  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.450  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.451  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.451  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.452  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.452  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.452  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.453  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.462  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.463  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.463  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.464  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.464  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.468  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.468  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.470  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.471  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.474  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.474  6646 15548 I Auth    : (REDACTED) [SupervisedAccountIntentOperation] onHandleIntent: %s
+04-06 19:00:52.491  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.491  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.492  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.492  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.492  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.493  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.494  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.494  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.495  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.495  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.496  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.496  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.497  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.497  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.497  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.497  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.497  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.498  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.498  6646 15552 I NearbyDiscovery: (REDACTED) processGrantSlicePermission: %s
+04-06 19:00:52.498  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.498  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.498  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.498  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.498  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.499  5621 15533 I Finsky:background: [172] Wrote row to frosting DB: 372
+04-06 19:00:52.500  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.500  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.501  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.501  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.501  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.503  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.505  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.505  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.505  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.505  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.506  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.507  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.508  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.511  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.513  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.515  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.515  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.541  5621 15533 I Finsky:background: [172] Wrote row to frosting DB: 373
+04-06 19:00:52.558  5621 15533 I Finsky:background: [172] Wrote row to frosting DB: 374
+04-06 19:00:52.560  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.562  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.582  5621 15533 I Finsky:background: [172] Wrote row to frosting DB: 375
+04-06 19:00:52.594  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.594   806  1470 W SignedPackage: Cannot get ApplicationInfo for package: com.google.android.devicelockcontroller
+04-06 19:00:52.620   806  1724 V SafetySourceDataValidat: Package: com.android.vending has expected signature
+04-06 19:00:52.620   806  1724 V SafetySourceDataValidat: Package: com.android.vending has expected signature
+04-06 19:00:52.641  6646  6791 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=AppsCorpus serviceId=36
+04-06 19:00:52.663  6646  6646 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.feedback.internal.IFeedbackService dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+04-06 19:00:52.663  6646  6646 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.feedback.internal.IFeedbackService dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+04-06 19:00:52.705  6761  6761 I Finsky  : [2] Memory trim requested to level 40
+04-06 19:00:52.705  6761  6761 I Finsky  : [2] Flushing in-memory image cache
+04-06 19:00:52.705  5621  5621 I Finsky:background: [2] Memory trim requested to level 40
+04-06 19:00:52.707  6761  6761 I Finsky  : [2] Current account updated in PVS
+04-06 19:00:52.708   806  1291 D BackgroundInstallControlService: Package event received: 0
+04-06 19:00:52.714  5621  5713 I Finsky:background: [50] Current account updated in PVS
+04-06 19:00:52.741  6646 15057 I Icing   : Usage reports ok 2, Failed Usage reports 0, indexed 0, rejected 0
+04-06 19:00:52.748  6646  6691 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=null serviceId=30
+04-06 19:00:52.803  6646 15057 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0
+04-06 19:00:52.831  6646 15057 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+04-06 19:00:52.833  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.834  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.841  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.841  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.842  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.843  6761  6824 E Finsky  : [68] ItemStore: getItems RPC failed for item org.polymorphicshade.tubular.debug
+04-06 19:00:52.844  6761  6811 I Finsky  : [58] Current account updated in PVS
+04-06 19:00:52.847  6761  6807 I Finsky  : [54] Current account updated in PVS
+04-06 19:00:52.848  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.850  6761  6824 E Finsky  : [68] ItemStore: getItems RPC failed for item org.polymorphicshade.tubular.debug
+04-06 19:00:52.853  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.856  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:00:52.857  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.858  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.858  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.858  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.859  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.859  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.859  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.860  6761  6810 I Finsky  : [57] Current account updated in PVS
+04-06 19:00:52.861  6646 15057 I Icing   : Indexing done com.google.android.gms-apps
+04-06 19:00:52.977  7172 15513 W libbinder.Binder: Binder transaction to android.content.IContentProvider code 21 took 1568ms. Data bytes: 512 Reply bytes: 464 Flags: 18
+04-06 19:00:52.978  1630  2592 D WellbeingModel: ....actionId: pause, packages: org.polymorphicshade.tubular.debug
+04-06 19:00:52.978  1630  2592 I WellbeingModel: retrieveActions(): finished
+04-06 19:00:53.349  1529  1688 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+04-06 19:00:53.350  1529  1688 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+04-06 19:00:54.790   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:00:54.862   806  4151 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+04-06 19:00:56.150   717   754 D BufferPoolAccessor2.0: evictor expired: 2, evicted: 0
+04-06 19:00:57.801   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:01:00.808   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:01:01.542 15572 15572 W libbinder.BackendUnifiedServiceManager: Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: package
+04-06 19:01:01.651  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
+04-06 19:01:01.652  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_AdsDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:01:01.654  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_CronetDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:01:01.655  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteLoader_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:01:01.656  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteModulesA_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:01:01.658  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteModulesC_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:01:01.659  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_GoogleCertificates_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:01:01.661  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_MapsDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:01:01.662  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_MeasurementDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:01:01.664  9409  9411 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_all_locale_splits.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-06 19:01:01.665  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000d/dl-PlayCloudSearch.optional_253434100000.apk has no usable artifacts
+04-06 19:01:01.667  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000b/dl-MlkitBarcodeUi.optional_253434100800.apk has no usable artifacts
+04-06 19:01:01.668  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000a/dl-TfliteDynamiteDynamite.integ_252130102100800.apk has no usable artifacts
+04-06 19:01:01.669  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.apk has no usable artifacts
+04-06 19:01:01.670  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000016/dl-PlayCloudSearch.optional_260438100000.apk has no usable artifacts
+04-06 19:01:01.671  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000002/DynamiteLoader.apk has no usable artifacts
+04-06 19:01:01.671  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000005/GoogleCertificates.apk has no usable artifacts
+04-06 19:01:01.672  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/0000000c/dl-Appsearch.optional_253434100800.apk has no usable artifacts
+04-06 19:01:01.673  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000015/dl-MlkitOcrCommon.optional_260438100800.apk has no usable artifacts
+04-06 19:01:01.674  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000013/dl-MlkitBarcodeUi.optional_260438100800.apk has no usable artifacts
+04-06 19:01:01.675  9409  9411 I artd    : GetBestInfo: vdex next to the dex file (/data/user/0/com.google.android.gms/app_dg_cache/BB2AE5A47BB198AF36C19CFD2B6407061A1BAF30/oat/x86_64/the.vdex) is kOatUpToDate with filter 'verify' executable 'false'
+04-06 19:01:01.677  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000011/dl-Appsearch.optional_260438100800.apk has no usable artifacts
+04-06 19:01:01.678  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000010/dl-VisionOcr.optional_260438100000.apk has no usable artifacts
+04-06 19:01:01.679  9409  9411 I artd    : GetBestInfo: /data/user/0/com.google.android.gms/app_dg_cache/94DF452EEF4B8E717545DCDEA6CC3C50A319A195/the.apk has no usable artifacts
+04-06 19:01:01.681  9409  9411 I artd    : GetBestInfo: /data/user_de/0/com.google.android.gms/app_chimera/m/00000007/MeasurementDynamite.apk has no usable artifacts
+04-06 19:01:02.199   806   942 D ActivityManager: freezing 12792 com.android.vending:instant_app_installer
+04-06 19:01:02.505  6761  6809 I Finsky  : [56] Current account updated in PVS
+04-06 19:01:02.708   806   942 D ActivityManager: freezing 5621 com.android.vending:background
+04-06 19:01:02.709   806   942 D ActivityManager: freezing 6761 com.android.vending
+04-06 19:01:02.712   806  1246 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+04-06 19:01:02.712   806  1246 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+04-06 19:01:02.712   806  1246 D InetDiagMessage: Destroyed live tcp sockets for uids={10153} in 1ms
+04-06 19:01:03.349  1529  1688 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+04-06 19:01:03.350  1529  1688 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+04-06 19:01:03.814   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:01:04.021   806  1246 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+04-06 19:01:04.021   806  1246 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+04-06 19:01:04.021   806  1246 D InetDiagMessage: Destroyed live tcp sockets for uids={10159} in 1ms
+04-06 19:01:04.021   806  1246 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+04-06 19:01:04.021   806  1246 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+04-06 19:01:04.021   806  1246 D InetDiagMessage: Destroyed live tcp sockets for uids={20159} in 0ms
+04-06 19:01:06.822   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-06 19:01:07.773  6646  6646 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.feedback.internal.IFeedbackService dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+04-06 19:01:09.830   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]

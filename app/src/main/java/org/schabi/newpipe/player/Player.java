@@ -2008,16 +2008,15 @@ public final class Player implements PlaybackListener, Listener {
                     .show();
             return;
         }
-
-        String url = currentMetadata.getStreamUrl();
-        if (url == null
-                && currentMetadata.getMaybeStreamInfo()
-                        .isPresent()) {
-            url = currentMetadata.getMaybeStreamInfo()
-                    .get().getUrl();
+        String url = null;
+        if (currentMetadata.getMaybeStreamInfo().isPresent()) {
+            url = currentMetadata.getMaybeStreamInfo().get().getUrl();
+        } else {
+            url = currentMetadata.getStreamUrl();
         }
+        final String finalUrl = url;
 
-        if (url != null) {
+        if (finalUrl != null && !finalUrl.isEmpty()) {
             android.widget.Toast.makeText(context,
                     "Requesting translation...",
                     android.widget.Toast.LENGTH_SHORT)
@@ -2039,6 +2038,7 @@ public final class Player implements PlaybackListener, Listener {
                 public void onSuccess(
                         final String audioUrl,
                         final double durationSeconds) {
+                    translationJob = null;
                     shadowAudioPlayer.loadTranslation(
                             audioUrl, durationSeconds);
                     android.widget.Toast.makeText(
@@ -2052,6 +2052,7 @@ public final class Player implements PlaybackListener, Listener {
                 @Override
                 public void onError(
                         final String error) {
+                    translationJob = null;
                     android.widget.Toast.makeText(
                             context,
                             "Error: " + error,
@@ -2063,9 +2064,10 @@ public final class Player implements PlaybackListener, Listener {
                                     false));
                 }
             };
+            final double durationSecs = (double) currentMetadata.getDurationSeconds();
             translationJob =
                     translationService.translateVideo(
-                            url, "en", "ru", cb,
+                            finalUrl, durationSecs, "en", "ru", cb,
                             kotlinx.coroutines
                                     .GlobalScope
                                     .INSTANCE);

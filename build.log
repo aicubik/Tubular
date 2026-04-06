@@ -3,46 +3,46 @@ Reusing configuration cache.
 > Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :app:checkDependenciesOrder
 > Task :app:runCheckstyle UP-TO-DATE
-> Task :app:runKtlint UP-TO-DATE
 > Task :app:formatKtlint UP-TO-DATE
+> Task :app:runKtlint UP-TO-DATE
 > Task :app:preDebugBuild
-> Task :app:writeDebugAppMetadata UP-TO-DATE
-> Task :app:generateDebugBuildConfig UP-TO-DATE
-> Task :app:validateSigningDebug UP-TO-DATE
 > Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :app:mergeDebugShaders UP-TO-DATE
 > Task :app:generateDebugResValues UP-TO-DATE
 > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
 > Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+> Task :app:validateSigningDebug UP-TO-DATE
 > Task :app:mergeDebugJniLibFolders UP-TO-DATE
-> Task :app:mergeDebugShaders UP-TO-DATE
-> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :app:l8DexDesugarLibDebug UP-TO-DATE
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
-> Task :app:l8DexDesugarLibDebug UP-TO-DATE
 > Task :app:extractDeepLinksDebug UP-TO-DATE
-> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
 > Task :app:checkDebugAarMetadata UP-TO-DATE
-> Task :app:mergeDebugAssets UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
 > Task :app:checkDebugDuplicateClasses UP-TO-DATE
-> Task :app:compressDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets UP-TO-DATE
 > Task :app:mergeDebugNativeLibs UP-TO-DATE
+> Task :app:compressDebugAssets UP-TO-DATE
 > Task :app:desugarDebugFileDependencies UP-TO-DATE
-> Task :app:stripDebugDebugSymbols UP-TO-DATE
 > Task :app:mergeLibDexDebug UP-TO-DATE
+> Task :app:stripDebugDebugSymbols UP-TO-DATE
 > Task :app:processDebugMainManifest UP-TO-DATE
 > Task :app:processDebugManifest UP-TO-DATE
 > Task :app:processDebugManifestForPackage UP-TO-DATE
 > Task :app:mapDebugSourceSetPaths
 > Task :app:generateDebugResources
-> Task :app:mergeExtDexDebug UP-TO-DATE
 > Task :app:processDebugNavigationResources
 > Task :app:compileDebugNavigationResources UP-TO-DATE
 > Task :app:extractDebugSupportedLocales
+> Task :app:mergeExtDexDebug UP-TO-DATE
 > Task :app:generateDebugLocaleConfig UP-TO-DATE
 > Task :app:packageDebugResources
-> Task :app:mergeDebugResources
 > Task :app:parseDebugLocalResources
-> Task :app:dataBindingGenBaseClassesDebug FAILED
+> Task :app:mergeDebugResources
+> Task :app:dataBindingGenBaseClassesDebug
 warn: removing resource org.polymorphicshade.tubular.debug:string/disable_error_reports_summary without required default value.
 warn: removing resource org.polymorphicshade.tubular.debug:string/disable_error_reports_title without required default value.
 warn: removing resource org.polymorphicshade.tubular.debug:string/enable_local_player_summary without required default value.
@@ -57,23 +57,26 @@ warn: removing resource org.polymorphicshade.tubular.debug:string/force_auto_ful
 warn: removing resource org.polymorphicshade.tubular.debug:string/sponsor_block_reset_colors_toast without required default value.
 
 > Task :app:processDebugResources
+> Task :app:kspDebugKotlin
+> Task :app:kaptGenerateStubsDebugKotlin
+> Task :app:kaptDebugKotlin
+> Task :app:compileDebugKotlin
 
-FAILURE: Build failed with an exception.
+> Task :app:compileDebugJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
 
-* What went wrong:
-Execution failed for task ':app:dataBindingGenBaseClassesDebug'.
-> Found data binding error(s):
-  
-  ERROR: <org.schabi.newpipe.views.NewPipeTextView id='@+id/translateButton'> conflicts with another tag that has the same ID file://app\src\main\res\layout\player.xml Line:208
-  ERROR: <TextView id='@+id/translateButton'> conflicts with another tag that has the same ID file://app\src\main\res\layout\player.xml Line:396
+> Task :app:processDebugJavaRes UP-TO-DATE
+> Task :app:mergeDebugJavaResource UP-TO-DATE
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :app:mergeProjectDexDebug
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:createDebugApkListingFileRedirect UP-TO-DATE
 
+[Incubating] Problems report is available at: file:///C:/Users/user/.gemini/antigravity/scratch/Youtube_Transcribtion/Tubular/build/reports/problems/problems-report.html
 
-* Try:
-> Run with --stacktrace option to get the stack trace.
-> Run with --info or --debug option to get more log output.
-> Run with --scan to get full insights from a Build Scan (powered by Develocity).
-> Get more help at https://help.gradle.org.
-
-BUILD FAILED in 3s
-39 actionable tasks: 10 executed, 29 up-to-date
+BUILD SUCCESSFUL in 15s
+51 actionable tasks: 18 executed, 33 up-to-date
 Configuration cache entry reused.
