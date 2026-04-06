@@ -236,4 +236,7 @@ public abstract class PlayerUi {
      */
     public void hideAutoSkip() {
     }
+
+    public void onTranslationStateChanged(final boolean isActive) {
+    }
 }

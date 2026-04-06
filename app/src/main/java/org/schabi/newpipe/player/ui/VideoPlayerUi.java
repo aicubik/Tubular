@@ -139,6 +139,22 @@ public abstract class VideoPlayerUi extends PlayerUi implements SeekBar.OnSeekBa
 
 
     /*//////////////////////////////////////////////////////////////////////////
+    // Translation
+    //////////////////////////////////////////////////////////////////////////*/
+
+    private void onTranslateClicked(final View v) {
+        player.toggleTranslation();
+    }
+
+    @Override
+    public void onTranslationStateChanged(final boolean isActive) {
+        if (binding.translateButton != null) {
+            binding.translateButton.setSelected(isActive);
+            binding.translateButton.setAlpha(isActive ? 1.0f : 0.5f);
+        }
+    }
+
+    /*//////////////////////////////////////////////////////////////////////////
     // Gestures
     //////////////////////////////////////////////////////////////////////////*/
 
@@ -251,6 +267,10 @@ public abstract class VideoPlayerUi extends PlayerUi implements SeekBar.OnSeekBa
                         .setPackage(App.PACKAGE_NAME))
         ));
         binding.switchMute.setOnClickListener(makeOnClickListener(player::toggleMute));
+        if (binding.translateButton != null) {
+            binding.translateButton.setOnClickListener(makeOnClickListener(this::onTranslateClicked));
+            binding.translateButton.setAlpha(0.5f);
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.itemsListPanel, (view, windowInsets) -> {
             final Insets cutout = windowInsets.getInsets(WindowInsetsCompat.Type.displayCutout());
@@ -313,6 +333,12 @@ public abstract class VideoPlayerUi extends PlayerUi implements SeekBar.OnSeekBa
         binding.openInBrowser.setOnClickListener(null);
         binding.playerCloseButton.setOnClickListener(null);
         binding.switchMute.setOnClickListener(null);
+        if (binding.translateButton != null) {
+            binding.translateButton.setOnClickListener(null);
+        }
+        if (binding.translateButton != null) {
+            binding.translateButton.setOnClickListener(null);
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.itemsListPanel, null);
 

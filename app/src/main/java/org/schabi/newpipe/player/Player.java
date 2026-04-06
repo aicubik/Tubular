@@ -216,6 +216,10 @@ public final class Player implements PlaybackListener, Listener {
 
     private ExoPlayer simpleExoPlayer;
     private AudioReactor audioReactor;
+    private org.schabi.newpipe.player.translation.ShadowAudioPlayer shadowAudioPlayer;
+    private org.schabi.newpipe.player.translation.YandexTranslationService translationService;
+    private org.schabi.newpipe.player.translation.AudioDuckingController audioDuckingController;
+    private kotlinx.coroutines.Job translationJob;
 
     @NonNull
     private final DefaultTrackSelector trackSelector;
@@ -670,6 +674,21 @@ public final class Player implements PlaybackListener, Listener {
 
         audioReactor = new AudioReactor(context, simpleExoPlayer);
 
+        if (translationService == null) {
+            translationService = new org.schabi.newpipe.player.translation.YandexTranslationService();
+        }
+        if (audioDuckingController == null) {
+            audioDuckingController = new org.schabi.newpipe.player.translation.AudioDuckingController(context, simpleExoPlayer);
+        }
+        if (shadowAudioPlayer == null) {
+            shadowAudioPlayer = new org.schabi.newpipe.player.translation.ShadowAudioPlayer(context);
+            shadowAudioPlayer.init(simpleExoPlayer, audioDuckingController);
+        } else {
+            shadowAudioPlayer.release();
+            shadowAudioPlayer = new org.schabi.newpipe.player.translation.ShadowAudioPlayer(context);
+            shadowAudioPlayer.init(simpleExoPlayer, audioDuckingController);
+        }
+
         registerBroadcastReceiver();
 
         // Setup UIs
@@ -697,6 +716,14 @@ public final class Player implements PlaybackListener, Listener {
         }
         UIs.call(PlayerUi::destroyPlayer);
 
+        if (translationJob != null) {
+            translationJob.cancel(null);
+            translationJob = null;
+        }
+        if (shadowAudioPlayer != null) {
+            shadowAudioPlayer.release();
+            shadowAudioPlayer = null;
+        }
         if (!exoPlayerIsNull()) {
             simpleExoPlayer.removeListener(this);
             simpleExoPlayer.stop();
@@ -1936,6 +1963,59 @@ public final class Player implements PlaybackListener, Listener {
         audioReactor.abandonAudioFocus();
         simpleExoPlayer.pause();
         saveStreamProgressState();
+    }
+
+    public void toggleTranslation() {
+        if (shadowAudioPlayer == null || currentMetadata == null || translationService == null) return;
+
+        boolean isActive = shadowAudioPlayer.isActive();
+        if (isActive) {
+            shadowAudioPlayer.stopTranslation();
+            if (translationJob != null) {
+                 translationJob.cancel(null);
+                 translationJob = null;
+            }
+            android.widget.Toast.makeText(context, "Translation disabled", android.widget.Toast.LENGTH_SHORT).show();
+            UIs.call(ui -> ui.onTranslationStateChanged(false));
+            return;
+        }
+
+        if (translationJob != null && translationJob.isActive()) {
+             android.widget.Toast.makeText(context, "Translation already processing...", android.widget.Toast.LENGTH_SHORT).show();
+             return;
+        }
+
+        String url = currentMetadata.getStreamUrl();
+        if (url == null && currentMetadata.getMaybeStreamInfo().isPresent()) {
+            url = currentMetadata.getMaybeStreamInfo().get().getUrl();
+        }
+
+        if (url != null) {
+            android.widget.Toast.makeText(context, "Requesting Yandex translation...", android.widget.Toast.LENGTH_SHORT).show();
+            UIs.call(ui -> ui.onTranslationStateChanged(true));
+
+            translationJob = translationService.translateVideo(url, "en", "ru",
+                new org.schabi.newpipe.player.translation.YandexTranslationService.TranslationCallback() {
+                    @Override
+                    public void onProgress(@androidx.annotation.NonNull String status, int remainingSeconds) {
+                        // Keep processing
+                    }
+
+                    @Override
+                    public void onSuccess(@androidx.annotation.NonNull String audioUrl, double durationSeconds) {
+                        shadowAudioPlayer.loadTranslation(audioUrl, durationSeconds);
+                        android.widget.Toast.makeText(context, "Translation active", android.widget.Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onError(@androidx.annotation.NonNull String error) {
+                        android.widget.Toast.makeText(context, "Translation Error: " + error, android.widget.Toast.LENGTH_LONG).show();
+                        UIs.call(ui -> ui.onTranslationStateChanged(false));
+                    }
+                }, kotlinx.coroutines.GlobalScope.INSTANCE);
+        } else {
+            android.widget.Toast.makeText(context, "Error: Could not determine video URL", android.widget.Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void playPause() {
