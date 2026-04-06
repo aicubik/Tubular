@@ -156,6 +156,7 @@ class ShadowAudioPlayer(
                 // Main video ended — stop translation too
                 stopTranslation()
             }
+
             Player.STATE_READY -> {
                 // Ensure sync when playback resumes
                 syncPosition()
@@ -171,8 +172,8 @@ class ShadowAudioPlayer(
         if (!isTranslationActive) return
 
         // User performed a seek — mirror it on the shadow player
-        if (reason == Player.DISCONTINUITY_REASON_SEEK
-            || reason == Player.DISCONTINUITY_REASON_SEEK_ADJUSTMENT
+        if (reason == Player.DISCONTINUITY_REASON_SEEK ||
+            reason == Player.DISCONTINUITY_REASON_SEEK_ADJUSTMENT
         ) {
             val newPositionMs = newPosition.positionMs
             shadowPlayer?.seekTo(newPositionMs)

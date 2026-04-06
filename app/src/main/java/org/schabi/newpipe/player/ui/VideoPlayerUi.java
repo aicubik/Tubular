@@ -142,7 +142,7 @@ public abstract class VideoPlayerUi extends PlayerUi implements SeekBar.OnSeekBa
     // Translation
     //////////////////////////////////////////////////////////////////////////*/
 
-    private void onTranslateClicked(final View v) {
+    private void onTranslateClicked() {
         player.toggleTranslation();
     }
 
@@ -268,7 +268,8 @@ public abstract class VideoPlayerUi extends PlayerUi implements SeekBar.OnSeekBa
         ));
         binding.switchMute.setOnClickListener(makeOnClickListener(player::toggleMute));
         if (binding.translateButton != null) {
-            binding.translateButton.setOnClickListener(makeOnClickListener(this::onTranslateClicked));
+            binding.translateButton.setOnClickListener(
+                    makeOnClickListener(this::onTranslateClicked));
             binding.translateButton.setAlpha(0.5f);
         }
 
@@ -333,9 +334,6 @@ public abstract class VideoPlayerUi extends PlayerUi implements SeekBar.OnSeekBa
         binding.openInBrowser.setOnClickListener(null);
         binding.playerCloseButton.setOnClickListener(null);
         binding.switchMute.setOnClickListener(null);
-        if (binding.translateButton != null) {
-            binding.translateButton.setOnClickListener(null);
-        }
         if (binding.translateButton != null) {
             binding.translateButton.setOnClickListener(null);
         }

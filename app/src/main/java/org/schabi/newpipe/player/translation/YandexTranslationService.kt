@@ -1,7 +1,6 @@
 package org.schabi.newpipe.player.translation
 
 import android.util.Log
-import kotlinx.coroutines.*
 import java.io.ByteArrayOutputStream
 import java.io.DataOutputStream
 import java.net.HttpURLConnection
@@ -9,6 +8,12 @@ import java.net.URL
 import java.util.UUID
 import javax.crypto.Mac
 import javax.crypto.spec.SecretKeySpec
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 /**
  * Service for translating YouTube videos via Yandex Browser's internal API.
@@ -32,15 +37,15 @@ class YandexTranslationService {
         // User-Agent string mimicking Yandex Browser
         private const val USER_AGENT =
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
-            "(KHTML, like Gecko) Chrome/124.0.0.0 YaBrowser/24.1.5.825 " +
-            "Yowser/2.5 Safari/537.36"
+                "(KHTML, like Gecko) Chrome/124.0.0.0 YaBrowser/24.1.5.825 " +
+                "Yowser/2.5 Safari/537.36"
 
         // Default video duration hint (seconds) if unknown
         private const val DEFAULT_DURATION = 900
 
         // Polling settings
         private const val POLL_INTERVAL_MS = 5000L
-        private const val MAX_POLL_ATTEMPTS = 60  // 5 minutes max
+        private const val MAX_POLL_ATTEMPTS = 60 // 5 minutes max
     }
 
     /**
@@ -98,6 +103,7 @@ class YandexTranslationService {
                             }
                             return@launch
                         }
+
                         is TranslationResult.InProgress -> {
                             withContext(Dispatchers.Main) {
                                 callback.onProgress(
@@ -108,6 +114,7 @@ class YandexTranslationService {
                             delay(POLL_INTERVAL_MS)
                             attempts++
                         }
+
                         is TranslationResult.Error -> {
                             withContext(Dispatchers.Main) {
                                 callback.onError(result.message)
@@ -181,7 +188,6 @@ class YandexTranslationService {
 
             val responseBytes = connection.inputStream.use { it.readBytes() }
             return parseProtobufResponse(responseBytes)
-
         } finally {
             connection.disconnect()
         }
@@ -261,6 +267,7 @@ class YandexTranslationService {
                         5 -> remainingTime = value.toInt()
                     }
                 }
+
                 1 -> { // 64-bit (double)
                     if (offset + 8 <= data.size) {
                         val bits = java.lang.Long.reverseBytes(
@@ -273,6 +280,7 @@ class YandexTranslationService {
                         }
                     }
                 }
+
                 2 -> { // Length-delimited (string/bytes)
                     val (length, newOffset3) = readVarint(data, offset)
                     offset = newOffset3
@@ -283,6 +291,7 @@ class YandexTranslationService {
                         9 -> errorMessage = String(strBytes, Charsets.UTF_8)
                     }
                 }
+
                 5 -> { // 32-bit
                     offset += 4
                 }
@@ -291,6 +300,7 @@ class YandexTranslationService {
 
         return when (status) {
             0 -> TranslationResult.Error(errorMessage ?: "Unknown error from Yandex")
+
             1 -> {
                 if (translationUrl != null) {
                     TranslationResult.Success(translationUrl, translationDuration)
@@ -298,7 +308,9 @@ class YandexTranslationService {
                     TranslationResult.Error("Success status but no translation URL")
                 }
             }
+
             2 -> TranslationResult.InProgress(remainingTime)
+
             else -> TranslationResult.Error("Unknown response status: $status")
         }
     }
@@ -309,14 +321,14 @@ class YandexTranslationService {
 
     private fun writeProtobufString(out: ByteArrayOutputStream, fieldNumber: Int, value: String) {
         val bytes = value.toByteArray(Charsets.UTF_8)
-        val tag = (fieldNumber shl 3) or 2  // wire type 2
+        val tag = (fieldNumber shl 3) or 2 // wire type 2
         writeVarint(out, tag)
         writeVarint(out, bytes.size)
         out.write(bytes)
     }
 
     private fun writeProtobufVarint(out: ByteArrayOutputStream, fieldNumber: Int, value: Int) {
-        val tag = (fieldNumber shl 3) or 0  // wire type 0
+        val tag = (fieldNumber shl 3) or 0 // wire type 0
         writeVarint(out, tag)
         writeVarint(out, value)
     }
