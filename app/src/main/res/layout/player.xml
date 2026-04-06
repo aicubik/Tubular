@@ -207,20 +207,6 @@
                         tools:text="720p" />
 
                     <org.schabi.newpipe.views.NewPipeTextView
-                        android:id="@+id/translateButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="35dp"
-                        android:layout_marginEnd="8dp"
-                        android:background="?attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:minWidth="0dp"
-                        android:padding="@dimen/player_main_buttons_padding"
-                        android:textColor="@android:color/white"
-                        android:textStyle="bold"
-                        tools:ignore="HardcodedText,RtlHardcoded"
-                        android:text="RU" />
-
-                    <org.schabi.newpipe.views.NewPipeTextView
                         android:id="@+id/playbackSpeed"
                         android:layout_width="wrap_content"
                         android:layout_height="35dp"
@@ -393,6 +379,23 @@
                         android:src="@drawable/ic_volume_off"
                         app:tint="@color/white"
                         tools:ignore="RtlHardcoded" />
+
+                    <TextView
+                        android:id="@+id/translateButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="37dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:minWidth="40dp"
+                        android:padding="@dimen/player_main_buttons_padding"
+                        android:text="RU"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:alpha="0.5"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
 
                     <androidx.appcompat.widget.AppCompatImageButton
                         android:id="@+id/fullScreenButton"
