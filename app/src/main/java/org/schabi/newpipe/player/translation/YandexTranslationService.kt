@@ -422,6 +422,7 @@ class YandexTranslationService {
         // Step 2: Build protobuf request
         val requestBody = buildProtobufRequest(
             videoUrl,
+            session.uuid,
             duration,
             videoTitle,
             fromLang,
@@ -492,6 +493,7 @@ class YandexTranslationService {
      */
     private fun buildProtobufRequest(
         url: String,
+        uuid: String,
         duration: Double,
         title: String,
         fromLang: String,
@@ -502,6 +504,8 @@ class YandexTranslationService {
 
         // 3: url (string)
         writeString(baos, 3, url)
+        // 4: uuid (string) — session identifier
+        writeString(baos, 4, uuid)
         // 5: firstRequest (bool as varint), default false so we omit if false
         if (firstRequest) {
             writeVarintField(baos, 5, 1)

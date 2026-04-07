@@ -1,0 +1,48 @@
+04-07 08:58:29.746   717  4812 D BufferPoolAccessor2.0: bufferpool2 0x7713a6418f98 : 4(16384 size) total buffers - 1(4096 size) used buffers - 454/458 (recycle/alloc) - 5/457 (fetch/transfer)
+04-07 08:58:29.756  4412  4412 D VideoPlayerUi: hideControls() called with: duration = [300], delay = [2000]
+04-07 08:58:29.763  4412  4703 D YandexTranslation: Starting translation for: https://youtu.be/iBNMQNIISUg (Sub Surface Skin Tutorial)
+04-07 08:58:29.763  4412  4703 D YandexTranslation: Creating new Vtrans session...
+04-07 08:58:30.110  4412  4412 D SPONSOR_BLOCK: Hiding manual skip buttons (UNSKIP)
+04-07 08:58:30.111  4412  4703 D YandexTranslation: Session created: uuid=258F339748826CEAC16942B3EE700A2E, expires=3600
+04-07 08:58:30.201  4412  4703 D YandexTranslation: Translation response: HTTP 200
+04-07 08:58:30.202  4412  4703 D YandexTranslation: Response: status=6, url=null, remaining=58, error=null
+04-07 08:58:30.204  4412  4703 D YandexTranslation: Status 6 (AUDIO_REQUESTED) - executing fallback...
+04-07 08:58:30.257  4412  4703 D YandexTranslation: fail-audio-js: HTTP 200
+04-07 08:58:30.368  4412  4703 D YandexTranslation: audio-empty: HTTP 405
+04-07 08:58:30.700  4832  4832 W libbinder.BackendUnifiedServiceManager: Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: package
+04-07 08:58:30.858  9409 23663 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
+04-07 08:58:30.862  9409 23663 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_AdsDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-07 08:58:30.864  9409 23663 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_CronetDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-07 08:58:30.866  9409 23663 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteLoader_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+--
+04-07 08:58:35.132   806   834 I DisplayDeviceRepository: Display device changed render timings: "Built-in Screen", renderFrameRate=60.000004, presentationDeadlineNanos=16666666, appVsyncOffsetNanos=1000000, frameRateOverrides=[{uid=10240 frameRateHz=60.000004}]
+04-07 08:58:35.256  4412  4807 D BufferPoolAccessor2.0: bufferpool2 0x7a1208273e58 : 5(40960 size) total buffers - 1(8192 size) used buffers - 694/700 (recycle/alloc) - 6/699 (fetch/transfer)
+04-07 08:58:35.412  4412  4703 D YandexTranslation: Translation response: HTTP 400
+04-07 08:58:35.413  4412  4703 E YandexTranslation: HTTP 400, error: (error_id:1775552321667156-1575888121381248203-l364mwcsamqasxhg-BAL) see logs for details
+04-07 08:58:36.113  4412  4412 D SPONSOR_BLOCK: Hiding manual skip buttons (UNSKIP)
+04-07 08:58:37.112  4412  4412 D SPONSOR_BLOCK: Hiding manual skip buttons (UNSKIP)
+04-07 08:58:37.424  1340  1340 I ClipboardListener: Clipboard overlay suppressed.
+04-07 08:58:37.429  2113  2451 I AiAiTranslate: C2T - not in a conversation
+04-07 08:58:38.043   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+--
+04-07 08:59:50.244   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-07 08:59:50.576  4412  4412 D VideoPlayerUi: onClick() called with: v = [android.widget.TextView{d48f699 VFED..C.. ...P.... 891,0-996,97 #7f0a0454 app:id/translateButton}]
+04-07 08:59:50.580  4412  4703 D YandexTranslation: Starting translation for: https://youtu.be/iBNMQNIISUg (Sub Surface Skin Tutorial)
+04-07 08:59:50.582   806  1938 W AS.PlaybackActivityMon: No piid assigned for invalid/internal port id 46
+04-07 08:59:50.697  4412  4703 D YandexTranslation: Translation response: HTTP 200
+04-07 08:59:50.697  4412  4703 D YandexTranslation: Response: status=2, url=null, remaining=5, error=null
+04-07 08:59:50.770  4863  4863 W libbinder.BackendUnifiedServiceManager: Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: package
+04-07 08:59:50.932  9409 23663 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
+04-07 08:59:50.939  9409 23663 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_AdsDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-07 08:59:50.941  9409 23663 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_CronetDynamite_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+04-07 08:59:50.942  9409 23663 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~scVi5FQG4d-fWzcBuZxYFA==/com.google.android.gms-STD1RVi9lhtf68y-PXK2hA==/oat/x86_64/split_DynamiteLoader_installtime.odex) is kOatUpToDate with filter 'speed' executable 'false'
+--
+04-07 08:59:53.651   587  7533 D android.hardware.audio@7.1-impl.ranchu: ~TinyalsaSink: stopping PCM stream
+04-07 08:59:54.144   592  4817 W C2BqBuffer: last successful dequeue was 60834474 us ago, 5332 consecutive failures
+04-07 08:59:55.755  4412  4703 D YandexTranslation: Translation response: HTTP 400
+04-07 08:59:55.755  4412  4703 E YandexTranslation: HTTP 400, error: (error_id:1775552401998705-18169688331806104974-l364mwcsamqasxhg-BAL) see logs for details
+04-07 08:59:56.257   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-07 08:59:59.154   592  4817 W C2BqBuffer: last successful dequeue was 65844371 us ago, 5773 consecutive failures
+04-07 08:59:59.266   806  1240 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+04-07 08:59:59.873   806   914 W NotificationService: Toast already killed. pkg=org.polymorphicshade.tubular.debug token=android.os.BinderProxy@fdbfa43
+04-07 09:00:00.007   806   841 D ActivityManager: sync unfroze 3885 com.android.settings for 3
