@@ -54,7 +54,7 @@ class YandexTranslationService {
         private const val MAX_POLL_ATTEMPTS = 60
 
         // User's OAuth session ID for "Живой голос"
-        private const val SESSION_ID = "3:1775475726.5.0.1752657645959:3vi41Q:721c.1.2:1|1130000014491103.0.2.3:1752657645|3:11822539.328420.C3h0TGSmwUOiPMZNXg_ucqA0qwU"
+        private const val SESSION_ID = ""
     }
 
     // --- Session state ---
