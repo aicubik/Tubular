@@ -52,6 +52,9 @@ class YandexTranslationService {
 
         private const val POLL_INTERVAL_MS = 5000L
         private const val MAX_POLL_ATTEMPTS = 60
+
+        // User's OAuth session ID for "Живой голос"
+        private const val SESSION_ID = "3:1775475726.5.0.1752657645959:3vi41Q:721c.1.2:1|1130000014491103.0.2.3:1752657645|3:11822539.328420.C3h0TGSmwUOiPMZNXg_ucqA0qwU"
     }
 
     // --- Session state ---
@@ -202,6 +205,9 @@ class YandexTranslationService {
                 setRequestProperty("Pragma", "no-cache")
                 setRequestProperty("Cache-Control", "no-cache")
                 setRequestProperty("Vtrans-Signature", signature)
+                if (SESSION_ID.isNotEmpty()) {
+                    setRequestProperty("Cookie", "Session_id=$SESSION_ID")
+                }
             }
 
             conn.outputStream.use { it.write(body) }
@@ -337,6 +343,9 @@ class YandexTranslationService {
             conn.readTimeout = 15000
             conn.setRequestProperty("Content-Type", "application/json")
             conn.setRequestProperty("User-Agent", USER_AGENT)
+            if (SESSION_ID.isNotEmpty()) {
+                conn.setRequestProperty("Cookie", "Session_id=$SESSION_ID")
+            }
             secHeaders.forEach { (k, v) -> conn.setRequestProperty(k, v) }
 
             conn.outputStream.use { it.write(body) }
@@ -375,6 +384,9 @@ class YandexTranslationService {
             conn.setRequestProperty("Content-Type", "application/x-protobuf")
             conn.setRequestProperty("Accept", "application/x-protobuf")
             conn.setRequestProperty("User-Agent", USER_AGENT)
+            if (SESSION_ID.isNotEmpty()) {
+                conn.setRequestProperty("Cookie", "Session_id=$SESSION_ID")
+            }
             secHeaders.forEach { (k, v) -> conn.setRequestProperty(k, v) }
 
             conn.outputStream.use { it.write(body) }
@@ -436,6 +448,9 @@ class YandexTranslationService {
                 setRequestProperty("Accept-Language", "en")
                 setRequestProperty("Pragma", "no-cache")
                 setRequestProperty("Cache-Control", "no-cache")
+                if (SESSION_ID.isNotEmpty()) {
+                    setRequestProperty("Cookie", "Session_id=$SESSION_ID")
+                }
 
                 // Security headers from session
                 secHeaders.forEach { (key, value) ->
@@ -503,6 +518,10 @@ class YandexTranslationService {
         writeVarintField(baos, 15, 1)
         // 16: unknown3 = 2
         writeVarintField(baos, 16, 2)
+        // 18: useLivelyVoice (bool)
+        if (SESSION_ID.isNotEmpty()) {
+            writeVarintField(baos, 18, 1)
+        }
         // 19: videoTitle (string)
         writeString(baos, 19, title)
 

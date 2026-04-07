@@ -1,222 +1,194 @@
 package org.schabi.newpipe.player.translation
 
 import android.content.Context
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import com.google.android.exoplayer2.C
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.PlaybackException
 import com.google.android.exoplayer2.Player
+import kotlin.math.abs
 
 /**
  * A "shadow" audio player that plays the translated audio track
  * synchronized with the main video player.
  *
- * It listens to the main player's state changes (play/pause/seek)
- * and mirrors them on the translation audio track.
+ * Design architecture (based on reliable patterns for dual-player sync):
+ * Uses a polling loop (every 500ms) rather than spammy ExoPlayer listeners.
+ * 1. Matches playing state (play/pause).
+ * 2. Matches speed (playback parameters).
+ * 3. Keeps timestamp synchronized (seeks shadow if drift > 400ms).
  */
 class ShadowAudioPlayer(
     private val context: Context
-) : Player.Listener {
+) {
 
     companion object {
         private const val TAG = "ShadowAudioPlayer"
-
-        // Max acceptable sync drift (ms) before forcing a re-sync
-        private const val SYNC_THRESHOLD_MS = 500L
-
-        // How often to check sync (ms)
-        private const val SYNC_CHECK_INTERVAL_MS = 2000L
+        private const val SYNC_INTERVAL_MS = 500L
+        private const val MAX_DRIFT_MS = 400L // If drift exceeds this, seek to resync
     }
 
     private var shadowPlayer: ExoPlayer? = null
     private var mainPlayer: ExoPlayer? = null
     private var audioDuckingController: AudioDuckingController? = null
 
-    // Track if translation is active
     private var isTranslationActive = false
-
-    // Translation audio duration (may differ from video duration)
     private var translationDurationMs: Long = 0
 
-    /**
-     * Initialize the shadow player and connect it to the main player.
-     */
+    private val syncHandler = Handler(Looper.getMainLooper())
+    private val syncRunnable = object : Runnable {
+        override fun run() {
+            syncPlayers()
+            if (isTranslationActive) {
+                syncHandler.postDelayed(this, SYNC_INTERVAL_MS)
+            }
+        }
+    }
+
+    private val shadowPlayerListener = object : Player.Listener {
+        override fun onPlayerError(error: PlaybackException) {
+            Log.e(TAG, "Shadow player error: ${error.message}", error)
+            stopTranslation()
+        }
+    }
+
     fun init(mainExoPlayer: ExoPlayer, duckingController: AudioDuckingController) {
         mainPlayer = mainExoPlayer
         audioDuckingController = duckingController
 
+        val audioAttributes = com.google.android.exoplayer2.audio.AudioAttributes.Builder()
+            .setUsage(C.USAGE_MEDIA)
+            .setContentType(C.CONTENT_TYPE_SPEECH)
+            .build()
+
         shadowPlayer = ExoPlayer.Builder(context)
             .build()
             .apply {
-                // Audio only — no video rendering needed
                 setWakeMode(C.WAKE_MODE_NETWORK)
-                addListener(this@ShadowAudioPlayer)
+                // handleAudioFocus = false: let both players coexist, prevent focus stealing
+                setAudioAttributes(audioAttributes, false)
+                addListener(shadowPlayerListener)
             }
-
-        // Listen to main player events
-        mainExoPlayer.addListener(this)
 
         Log.d(TAG, "Shadow player initialized")
     }
 
-    /**
-     * Load and play the translation audio from URL.
-     */
     fun loadTranslation(audioUrl: String, durationSeconds: Double) {
         val player = shadowPlayer ?: return
         val main = mainPlayer ?: return
 
         translationDurationMs = (durationSeconds * 1000).toLong()
 
-        // Create media item for the translation audio
+        Log.d(TAG, "Loading translation: url=${audioUrl.take(60)}, dur=${durationSeconds}s")
+
         val mediaItem = MediaItem.fromUri(audioUrl)
         player.setMediaItem(mediaItem)
         player.prepare()
 
-        // Sync with main player's current position
-        val mainPosition = main.currentPosition
-        if (mainPosition > 0) {
-            player.seekTo(mainPosition)
-        }
-
-        // Match the play state
-        player.playWhenReady = main.isPlaying
-
-        // Duck the main player's volume
+        // Sync and enable ducking immediately
+        isTranslationActive = true
         audioDuckingController?.enableDucking()
 
-        isTranslationActive = true
-        Log.d(TAG, "Translation loaded: $audioUrl, duration: ${durationSeconds}s")
+        // Start the sync loop which will handle seeking and playing
+        startSyncLoop()
+        Log.d(TAG, "Translation active and syncing started!")
+    }
+
+    private fun startSyncLoop() {
+        syncHandler.removeCallbacks(syncRunnable)
+        syncHandler.post(syncRunnable)
+    }
+
+    private fun stopSyncLoop() {
+        syncHandler.removeCallbacks(syncRunnable)
     }
 
     /**
-     * Stop translation playback and restore main player volume.
+     * Called every 500ms to align the shadow player perfectly with the main player.
+     * This avoids event loops, stuttering on micro-buffers, and disconnects.
      */
+    private fun syncPlayers() {
+        val sp = shadowPlayer ?: return
+        val main = mainPlayer ?: return
+
+        if (!isTranslationActive) return
+
+        // 1. Sync Playback Parameters (Speed)
+        if (sp.playbackParameters != main.playbackParameters) {
+            sp.playbackParameters = main.playbackParameters
+        }
+
+        // 2. State & Position check
+        val mainIsPlaying = main.isPlaying
+        val mainPos = main.currentPosition
+        val spPos = sp.currentPosition
+
+        // If main player finished or we reached the end of the translation audio bounds
+        val overDuration = translationDurationMs > 0 && mainPos >= translationDurationMs
+        if (main.playbackState == Player.STATE_ENDED || overDuration) {
+            if (sp.isPlaying) {
+                sp.pause()
+                Log.d(TAG, "Shadow paused: target exceeded duration bounds")
+            }
+            return
+        }
+
+        // 3. Play/Pause state matching
+        if (mainIsPlaying != sp.isPlaying) {
+            // Main player is playing and shadow isn't (or vice versa)
+            if (mainIsPlaying) {
+                sp.play()
+            } else {
+                sp.pause()
+            }
+        }
+
+        // 4. Position Drift Synchronization
+        // Only seek if we are drifting significantly (prevent audio tearing/flushing)
+        if (mainIsPlaying) {
+            val drift = abs(mainPos - spPos)
+            if (drift > MAX_DRIFT_MS) {
+                Log.d(TAG, "Resyncing shadow. Drift: ${drift}ms. main=$mainPos, shadow=$spPos")
+                sp.seekTo(mainPos)
+            }
+        } else {
+            // Always perfectly match when paused to prepare for playback resume
+            if (abs(mainPos - spPos) > 50L) {
+                sp.seekTo(mainPos)
+            }
+        }
+    }
+
     fun stopTranslation() {
+        if (!isTranslationActive) return
+        isTranslationActive = false
+
+        stopSyncLoop()
+
         shadowPlayer?.apply {
             stop()
             clearMediaItems()
         }
 
         audioDuckingController?.disableDucking()
-        isTranslationActive = false
-
         Log.d(TAG, "Translation stopped")
     }
 
-    /**
-     * Check if translation is currently playing.
-     */
     fun isActive(): Boolean = isTranslationActive
 
-    /**
-     * Release all resources.
-     */
     fun release() {
-        mainPlayer?.removeListener(this)
         stopTranslation()
 
         shadowPlayer?.apply {
-            removeListener(this@ShadowAudioPlayer)
+            removeListener(shadowPlayerListener)
             release()
         }
         shadowPlayer = null
         mainPlayer = null
 
         Log.d(TAG, "Shadow player released")
-    }
-
-    // =========================================================================
-    // Main player event listeners — keep shadow player in sync
-    // =========================================================================
-
-    override fun onIsPlayingChanged(isPlaying: Boolean) {
-        if (!isTranslationActive) return
-
-        shadowPlayer?.let { sp ->
-            if (isPlaying) {
-                if (!sp.isPlaying) {
-                    sp.play()
-                    syncPosition()
-                }
-            } else {
-                if (sp.isPlaying) {
-                    sp.pause()
-                }
-            }
-        }
-    }
-
-    override fun onPlaybackStateChanged(playbackState: Int) {
-        if (!isTranslationActive) return
-
-        when (playbackState) {
-            Player.STATE_ENDED -> {
-                // Main video ended — stop translation too
-                stopTranslation()
-            }
-
-            Player.STATE_READY -> {
-                // Ensure sync when playback resumes
-                syncPosition()
-            }
-        }
-    }
-
-    override fun onPositionDiscontinuity(
-        oldPosition: Player.PositionInfo,
-        newPosition: Player.PositionInfo,
-        reason: Int
-    ) {
-        if (!isTranslationActive) return
-
-        // User performed a seek — mirror it on the shadow player
-        if (reason == Player.DISCONTINUITY_REASON_SEEK ||
-            reason == Player.DISCONTINUITY_REASON_SEEK_ADJUSTMENT
-        ) {
-            val newPositionMs = newPosition.positionMs
-            shadowPlayer?.seekTo(newPositionMs)
-            Log.d(TAG, "Seek synced to ${newPositionMs}ms")
-        }
-    }
-
-    override fun onPlaybackParametersChanged(
-        playbackParameters: com.google.android.exoplayer2.PlaybackParameters
-    ) {
-        if (!isTranslationActive) return
-
-        // Mirror playback speed changes
-        shadowPlayer?.playbackParameters = playbackParameters
-        Log.d(TAG, "Playback speed synced: ${playbackParameters.speed}x")
-    }
-
-    override fun onPlayerError(error: PlaybackException) {
-        Log.e(TAG, "Shadow player error: ${error.message}")
-        // Don't crash the main player — just stop translation silently
-        stopTranslation()
-    }
-
-    // =========================================================================
-    // Sync helpers
-    // =========================================================================
-
-    /**
-     * Force-sync the shadow player position to match the main player.
-     */
-    private fun syncPosition() {
-        val main = mainPlayer ?: return
-        val shadow = shadowPlayer ?: return
-
-        if (!isTranslationActive) return
-
-        val mainPos = main.currentPosition
-        val shadowPos = shadow.currentPosition
-        val drift = kotlin.math.abs(mainPos - shadowPos)
-
-        if (drift > SYNC_THRESHOLD_MS) {
-            shadow.seekTo(mainPos)
-            Log.d(TAG, "Re-synced: drift was ${drift}ms")
-        }
     }
 }
